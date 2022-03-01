@@ -1,0 +1,114 @@
+:root {
+    --snow: #FFFCFF;
+    --deepred: #702632;
+    --mutedred: #912F40;
+    --celadon: #247BA0;
+    --greengray: #CBD4C2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* header banner styling */
+.top-banner {
+    background-color: var(--mutedred);
+    color: var(--snow);
+    height: 10vh;
+    min-height: 70px;
+    width: 110%;
+    display: flex;
+    flex-flow: row nowrap;
+    /* justify-items:right;
+    justify-content: space-between;
+    align-content: space-between; */
+    margin: -10px -10px 0 -10px;
+}
+
+/* items within header banner */
+.top-banner > img {
+    color: var(--snow);
+    width: 30vw;
+    height: auto;
+    min-width: 150px;
+    margin: 10px;
+}
+
+/* social media div styling */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: inherit;
+}
+
+/* social media icon styling */
+.fab {
+    color: var(--snow);
+    font-size: 20px;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+/* bottom of header nav bar styling */
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--mutedred);
+    width: 110%;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.nav-bar>a {
+    display: none;
+}
+
+.fas, .fa-bars{
+    color: var(--snow);
+    font-size: 25px;
+    margin: 5px;
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    /* social media link styling for all states */
+    .social-links>a:link {
+        color: var(--snow);
+        text-decoration: none;
+        font-weight: 700;
+    }
+    
+    .social-links>a:visited {
+        color: var(--greengray);
+        text-decoration: none;
+        font-weight: 700;
+    }
+    
+    .social-links>a:hover {
+        background-color: var(--greengray);
+        color: var(--celadon);
+        text-decoration: none;
+        font-weight: 700;
+    }
+    
+    .social-links>a:active {
+        background-color: var(--deepred);
+        color: var(--greengray);
+        text-decoration: none;
+        font-weight: 700;
+    }
+}
