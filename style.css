@@ -1,3 +1,8 @@
+/*  font-family: 'Bebas Neue', cursive;
+    font-family: 'Cabin Sketch', cursive;
+    font-family: 'Josefin Slab', serif;
+    font-family: 'Poiret One', cursive; */
+
 :root {
     --snow: #FFFCFF;
     --deepred: #702632;
@@ -10,19 +15,23 @@
     box-sizing: border-box;
 }
 
+html {
+    margin: 0px;
+    padding: 0;
+    background-color: var(--mutedred);
+}
+
 /* header banner styling */
 .top-banner {
     background-color: var(--mutedred);
     color: var(--snow);
     height: 10vh;
     min-height: 70px;
-    width: 110%;
+    width: 100%;
     display: flex;
-    flex-flow: row nowrap;
-    /* justify-items:right;
+    flex-direction: row;
     justify-content: space-between;
-    align-content: space-between; */
-    margin: -10px -10px 0 -10px;
+    /* margin: -10px -10px 0 -10px; */
 }
 
 /* items within header banner */
@@ -31,7 +40,7 @@
     width: 30vw;
     height: auto;
     min-width: 150px;
-    margin: 10px;
+    margin-top: 5px;
 }
 
 /* social media div styling */
@@ -39,11 +48,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-content: flex-end;
+    align-items: flex-end;
     width: 100%;
     margin-top: 10px;
-    margin-left: 10px;
-    position: inherit;
+    margin-right: 5vw;
 }
 
 /* social media icon styling */
@@ -58,11 +66,11 @@
 .nav-bar {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     background-color: var(--mutedred);
-    width: 110%;
-    margin-right: -10px;
-    margin-left: -10px;
+    width: 100%;
+    /* margin-right: -10px;
+    margin-left: -10px; */
 }
 
 .nav-bar>a {
@@ -72,9 +80,49 @@
 .fas, .fa-bars{
     color: var(--snow);
     font-size: 25px;
-    margin: 5px;
+    margin: 5px auto;
+    /*for now, center bars within nav div; if want to change to right align with social links in the future, change/add:
+    margin: 5px 0;
+    margin-right: 10vw;*/
 }
 
+.main-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.flag {
+    height: 100px;
+    width: auto;
+    margin: 0 -8px;
+    font-size: 0.75rem;
+}
+
+.flag:nth-child(odd) {
+    background-color: var(--deepred);
+}
+
+a {
+    /* font-family: 'Bebas Neue', cursive; LIKE */
+    font-family: 'Cabin Sketch', cursive; LIKE
+    /* font-family: 'Josefin Slab', serif; LIKE */    
+}
+a:link {
+    text-decoration: none;
+    color: var(--snow);
+}
+
+a:hover {
+    
+}
+
+a:active {
+    
+}
+
+a:visited {
+    
+}
 
 
 
