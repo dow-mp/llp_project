@@ -94,6 +94,7 @@ html {
 .main-body {
     display: flex;
     flex-direction: column;
+    color: var(--snow);
 }
 
 /* style each div within the main body (i.e. excluding the header and footer) */
@@ -137,6 +138,63 @@ a:active {
     text-decoration: none;
     background-color: var(--greengray);
     color: var(--black);
+}
+
+/* styling for the about page information section */
+
+.about > h1 {
+    text-transform: lowercase;
+    font-family: sapodilla, sans-serif;
+    font-size: 2rem;
+}
+
+.about > p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.about {
+    border: 5px solid var(--deepred);
+    margin: 10px auto;
+    padding: 5px;
+    text-align: center;
+}
+
+/* styling for admin login page login form */
+.login-div {
+    border: 5px solid var(--deepred);
+    padding: 15px;
+    margin: 20px auto;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    color: var(--snow);
+    font-family: little twig, sans-serif;
+    font-size: 1.5rem;
+}
+
+input {
+    height: 40px;
+    width: 200px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.user, .password, .center-submit {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.center-submit {
+    width: 100px;
+    border-radius: 5px;
+    margin-top: 40px;
 }
 
 /* styling for the footer container */
