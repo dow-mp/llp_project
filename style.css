@@ -10,6 +10,8 @@
     --celadon: #247BA0;
     --greengray: #CBD4C2;
     --black: #000000;
+    --littletwig: little twig, Arial, Helvetica, sans-serif;
+    --sapodilla: sapodilla, Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -107,13 +109,10 @@ html {
     font-size: 0.75rem;
 }
 
-.flag:nth-child(odd) {
-    background-color: var(--deepred);
-}
 
 /* link styling for each flag within the main body */
 a {
-    font-family: little twig, sand-serif;
+    font-family:  var(--littletwig);
     font-size: 1.5rem;
     margin-left: 5px;
 }
@@ -141,15 +140,14 @@ a:active {
 }
 
 /* styling for the about page information section */
-
-.about > h1 {
+.love-local-parks {
     text-transform: lowercase;
-    font-family: sapodilla, sans-serif;
+    font-family: var(--sapodilla);
     font-size: 2rem;
 }
 
 .about > p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -173,7 +171,7 @@ a:active {
     justify-content: center;
     align-content: center;
     color: var(--snow);
-    font-family: little twig, sans-serif;
+    font-family: var(--littletwig);
     font-size: 1.5rem;
 }
 
@@ -220,13 +218,13 @@ footer {
 /* styling for links within the footer */
 .contact, .admin {
     color: var(--snow);
-    font-family: little twig, sans-serif;
+    font-family: var(--littletwig);
     margin: 0 15px;
 }
 
 .copyright {
     color: var(--snow);
-    font-family: sapodilla, sans-serif;
+    font-family: var(--sapodilla);
     margin: 0 15px;
     margin-bottom: 5px;
 }
@@ -234,7 +232,69 @@ footer {
 
 
 
-/* styling for tablet and desktop sized screens */
+/* MEDIA QUERIES - unique styling for mobile, tablet, desktop */
+/* MOBILE */
+@media screen and (max-width: 767px) {
+    /* styling for alternating color of div flags on mobile home page */
+    .flag:nth-child(odd) {
+        background-color: var(--deepred);
+    }
+    
+    .park-photo {
+        display: none;
+    }
+    
+}
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .nav-bar {
+        background-color: var(--deepred);
+        /* border: 1px solid var(--snow); */
+        margin-left: -8px;
+        margin-right: -8px;
+        width:auto;
+    }
+   
+    .nav-bar > a {
+        display: inline-block;
+        margin: 10px auto;
+        font-size: 1.25rem;
+    }
+
+    #mobile-nav {
+        display: none;
+    }
+
+    .top-banner {
+        margin-bottom: 10px;
+    }
+
+    .main-body {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+
+    .flag {
+        display: flex;
+        justify-content: center;
+        width: 45vw;
+        background-color: var(--deepred);
+        border-radius: 25px;
+        border: 1px solid var(--snow);
+        margin: 10px 5px;
+
+    }
+
+    .park-photo {
+        display: none;
+    }
+
+    
+}
+
+/* DESKTOP */
 @media screen and (min-width: 1024px) {
     .social-links {
         display: flex;
