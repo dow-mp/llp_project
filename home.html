@@ -11,18 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin+Sketch:wght@400;700&family=Josefin+Slab:wght@100;500&family=Poiret+One&display=swap" rel="stylesheet"> 
     <!-- end Google Fonts links -->
 
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <script defer src="./script.js"></script>
+    <link rel="stylesheet" type="text/css" href="./Styles/style.css">
+    <script defer src="./Scripts/script.js"></script>
     <script src="https://kit.fontawesome.com/7089f52c85.js" crossorigin="anonymous"></script>
     <title>Love Local Parks</title>
 </head>
 <body>
+<div class="main-div">
     <header>
         <!-- logo image left | social nav right -->
         <div class="top-banner">
-
-            <img src="./Media/Images/LLPlogov3final.svg" alt="love local parks logo">
-
+            <div class="logo-div">
+                <img id="logo" src="./Media/Images/LLPlogov3final.svg" alt="love local parks logo">
+            </div>
             <div class="social-links">
                 <a href="#" referrerpolicy="noopener noreferrer" target="_blank" class="fab fa-facebook-f"></a>
                 <a href="#" referrerpolicy="noopener noreferrer" target="_blank" class="fab fa-instagram"></a>
@@ -34,39 +35,35 @@
 
         <nav class="nav-bar">
             <i id="mobile-nav" class="fas fa-bars"></i>
-            <a href="#" rel="noopener noreferrer" target="_blank">Home</a>
-            <a href="./about.html" rel="noopener noreferrer" target="_blank">About</a>
-            <a href="#" rel="noopener noreferrer" target="_blank">Search</a>
-            <a href="#" rel="noopener noreferrer" target="_blank">Volunteer</a>
-            <a href="#" rel="noopener noreferrer" target="_blank">Get Help</a>
-            <a href="#" rel="noopener noreferrer" target="_blank">Success</a>
+            <a class="nav-word" href="#" rel="noopener noreferrer" target="_blank">Home</a>
+            <a class="nav-word" href="./about.html" rel="noopener noreferrer" target="_blank">About</a>
+            <a class="nav-word" href="#" rel="noopener noreferrer" target="_blank">Contact</a>
+            <a class="nav-word" href="#" rel="noopener noreferrer" target="_blank">Admin Login</a>
+            <!-- <a class="nav-word" href="#" rel="noopener noreferrer" target="_blank">Get Help</a>
+            <a class="nav-word" href="#" rel="noopener noreferrer" target="_blank">Success</a> -->
         </nav>
     </header>
 
-    <div class="main-body">
-    <!-- <section>
-        About Love Local Parks vertical banner on the left side of the page
-        <h1>Love Local Parks is...</h1>
-        <p>dedicated.</p>
-        <p>community-driven.</p>
-        <p>simple.</p>
-        <p>in need of your help!</p>
-        <h2>We love local parks.</h2>
-    </section> -->
+    <div class="blurb-div">
+        <section>
+            <h2 class="blurb">Let's keep our local parks clean.</h2>
+        </section>
+    </div>
 
+    <div class="main-body">
         <div class="flag flag1">
             <section>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a class="main-link" href="#" target="_blank" rel="noopener noreferrer" onmouseenter="changeFlag1Color()" onmouseleave="flag1ColorReverse()">
                 <!-- links to the main sections of the site here -->
                 Volunteer
                 </a>
-                <img class="park-photo" src="./Media/Images/KileyPl.jpg" alt="aerial view of baseball diamond and basketball courts at Kiley Playground in Lynn, Massachusetts">
+                <!-- <img class="park-photo" src="./Media/Images/KileyPl.jpg" alt="aerial view of baseball diamond and basketball courts at Kiley Playground in Lynn, Massachusetts"> -->
             </section>
         </div>
 
         <div class="flag flag2">
             <section>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a  class="main-link" href="#" target="_blank" rel="noopener noreferrer" onmouseenter="changeFlag2Color()" onmouseleave="flag2ColorReverse()">
                 <!-- links to the main sections of the site here -->
                 Does your park need help?
                 </a>
@@ -74,16 +71,16 @@
         </div>
         <div class="flag flag3">
             <section>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a  class="main-link" href="#" target="_blank" rel="noopener noreferrer" onmouseenter="changeFlag3Color()" onmouseleave="flag3ColorReverse()">
                 <!-- links to the main sections of the site here -->
                 Curious about your park?</h2>
                 </a>
-                <img class="park-photo" src="./Media/Images/FreyPl.jpg" alt="aerial view of Frey Playground in Lynn, Massachusetts">
+                <!-- <img class="park-photo" src="./Media/Images/FreyPl.jpg" alt="aerial view of Frey Playground in Lynn, Massachusetts"> -->
             </section>
         </div>
         <div class="flag flag4">
             <section>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a  class="main-link" href="#" target="_blank" rel="noopener noreferrer" onmouseenter="changeFlag4Color()" onmouseleave="flag4ColorReverse()">
                 <!-- links to the main sections of the site here -->
                 Success Stories
                 </a>
@@ -94,12 +91,12 @@
     
     <div class="footer">
         <footer>
-            <p class="contact">Contact</p>
+            <!-- <p class="contact">Contact</p> -->
             <p class="copyright">&copy; Love Local Parks 2022</p>
-            <a href="#" target="_blank" rel="noopener noreferrer"></a><p class="admin">Admin Login</p></a>
+            <!-- <a href="#" target="_blank" rel="noopener noreferrer"></a><p class="admin">Admin Login</p></a> -->
         </footer>
     </div>
 
-
+</div>
 </body>
 </html>
