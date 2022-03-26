@@ -133,7 +133,7 @@ html, body {
     margin-right: 10vw;*/
 }
 
-/* blurb styling (no animation as of March 23, 2022 */
+/* blurb styling for home pg (no animation as of March 26, 2022) */
 .blurb-div {
     background-color: var(--greengray);
     padding: 0px;
@@ -164,7 +164,7 @@ html, body {
     /* animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1); */
 }
 
-/* layout of the page in vertical columns between header and footer */
+/* layout of the home page in vertical columns between header and footer */
 .main-body {
     background-color: var(--greengray);
     display: flex;
@@ -192,7 +192,6 @@ html, body {
     border-radius: 20px;
 
 }
-
 
 /* link styling for each flag within the main body */
 a {
@@ -268,7 +267,7 @@ a {
     font-size: 1rem;
 }
 
-input {
+.user>input, .password>input, .center-submit {
     height: 10vh;
     max-height: 40px;
     min-height: 30px;
@@ -296,6 +295,99 @@ input {
     border: none;
     box-shadow: none;
 }
+
+/* styling for search page */
+.search-div {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;
+    margin: 40px auto;
+    border: 5px solid var(--greengray);
+}
+
+.map-box {
+    display: flex;
+    height: 40vh;
+    width: 60vw;
+    max-height: 600px;
+    max-width: 600px;
+    /* border: 1px dashed var(--deepred); */
+    margin: 40px auto;
+}
+
+.map-table {
+    display: flex;
+    justify-content: center;
+    border-collapse: collapse;
+    /* border: 1px dashed var(--mutedred); */
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+td>input {
+    height: fit-content;
+    border: none;
+}
+
+tbody > tr:nth-child(even) {
+    background-color: var(--greengray);
+}
+
+th, td {
+    text-align: center;
+    padding: 5px 10px;
+}
+
+th {
+    font-weight: 700;
+    font-size: 1.3rem;
+    background-color: var(--deepred);
+    color: var(--snow);
+}
+
+/* styling volunteer page */
+.volunteerForm-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.volunteer-headline {
+    text-align: center;
+    font-family: var(--sapodilla);
+    margin-top: 30px;
+}
+
+.volunteer-form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    border: 3px solid var(--greengray);
+    padding: 20px;
+}
+
+.volunteer-form > fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    align-items: flex-end;
+}
+
+.volunteer-form > fieldset > label, .volunteer-form > label {
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.volunteer-form > fieldset > label > input {
+    width: 25vw;
+    min-width: 150px;
+    margin: 6px 0;
+}
+
 
 /* styling for the footer container */
 footer {

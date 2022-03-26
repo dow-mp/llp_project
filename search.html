@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="./Styles/style.css">
     <script defer src="./Scripts/script.js"></script>
     <script src="https://kit.fontawesome.com/7089f52c85.js" crossorigin="anonymous"></script>
-    <title>Love Local Parks</title>
+    <title>Search</title>
 </head>
 <body>
 <div class="main-div">
@@ -43,7 +43,54 @@
             <a class="nav-word" href="#" rel="noopener noreferrer" target="_blank">Success</a> -->
         </nav>
     </header>
-   
+    <div class="search-div">
+        <div class="map-box">
+            <!-- Insert Map Here -->
+        </div>
+        <div class="map-table">
+            <!-- List of All Parks within the search radius should Display Here -->
+            <table class="search-table">
+                <thead class="table-headers">
+                    <tr>
+                        <th>Park</th>
+                        <th>Street Address</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Needs Help</th>
+                        <th>Got Some Love</th>
+                   </tr>
+                </thead>
+                <!-- as people mouse over a specific park - is it possible to highlight that pin on the map? -->
+                <tbody>
+                    <tr>
+                        <td>Sample Park</td>
+                        <td>123 Sample St</td>
+                        <td>Sample City</td>
+                        <td>Sa</td>
+                        <td><input type="checkbox"/></td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>Sample Park</td>
+                        <td>123 Sample St</td>
+                        <td>Sample City</td>
+                        <td>Sa</td>
+                        <td><input type="checkbox"/></td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>Sample Park</td>
+                        <td>123 Sample St</td>
+                        <td>Sample City</td>
+                        <td>Sa</td>
+                        <td><input type="checkbox"/></td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                <!-- data will be supplied based on map search area -->
+                </tbody>
+            </table>
+        </div>
+    </div>
     <div class="footer">
         <footer>
             <!-- <p class="contact">Contact</p> -->
