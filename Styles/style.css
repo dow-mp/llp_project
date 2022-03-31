@@ -348,46 +348,78 @@ th {
     color: var(--snow);
 }
 
-/* styling volunteer page */
-.volunteerForm-div {
+/* styling volunteer/help page forms/inputs for MOBILE */
+.input-form-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
 }
 
-.volunteer-headline {
+.form-headline {
     text-align: center;
     font-family: var(--sapodilla);
     margin-top: 30px;
 }
 
-.volunteer-form {
+.input-form {
     display: flex;
     flex-direction: column;
     margin: 20px auto;
     border: 3px solid var(--greengray);
     padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-content: center;
 }
 
-.volunteer-form > fieldset {
+.input-form > fieldset {
     display: flex;
     flex-direction: column;
     border: none;
-    align-items: flex-end;
+    align-items: center;
+    margin: 0 auto;
+    /* justify-items: space-between; */
 }
 
-.volunteer-form > fieldset > label, .volunteer-form > label {
-    display: inline-block;
+/* .formText *{
+    vertical-align: middle;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+label {
+    margin-top: 15px;
+    max-width: 150px;
+    overflow-wrap: break-word;
 }
 
-.volunteer-form > fieldset > label > input {
+.input-form > fieldset > label > input, .input-form > fieldset > div > label > textarea {
+    display: block;
+    /* flex-direction: column; */
     width: 25vw;
     min-width: 150px;
-    margin: 6px 0;
+    margin: 0 auto;
 }
 
+/* .shareWarning {
+    font-size: 0.6rem;
+    overflow-wrap: break-word;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid lightgray;
+    width: fit-content;
+    margin: 10px auto;
+    padding: 3px;
+} */
+
+.toSearchPageP {
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.toSearchPage {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
 
 /* styling for the footer container */
 footer {
@@ -655,6 +687,88 @@ footer {
         background-color: var(--greengray);
         color: var(--celadon);
         text-decoration: none;
+    }
+
+    /* styling volunteer/help page forms/inputs */
+    .input-form-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .form-headline {
+        text-align: center;
+        font-family: var(--sapodilla);
+        margin-top: 30px;
+    }
+
+    .input-form {
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+        border: 3px solid var(--greengray);
+        min-width: 70vw;
+        padding: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .input-form > fieldset {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        border: none;
+
+    }
+
+    /* styling for help page text area input ONLY */
+    .formText *{
+        vertical-align: middle;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* .input-form > fieldset > label {
+        display: inline-block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    } */
+
+    .postToSocialLabel {
+        text-align: center;
+    }
+
+    label {
+        margin-top: 10px;
+        max-width: none;
+        overflow-wrap: normal;
+    }
+
+    .input-form > fieldset > label > input, .input-form > fieldset > div > label > textarea {
+        display: inline-block;
+        width: 25vw;
+        min-width: 150px;
+        margin: 10px 0;
+
+    }
+
+    /* .shareWarning {
+        font-size: 0.6rem;
+        overflow-wrap: break-word;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid lightgray;
+        width: fit-content;
+        margin: 10px auto;
+        padding: 3px;
+    } */
+
+    .toSearchPageP {
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+
+    .toSearchPage {
+        text-transform: uppercase;
+        font-size: 1.6rem;
     }
 
 }
