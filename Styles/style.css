@@ -193,6 +193,10 @@ html, body {
 
 }
 
+.flagClicked {
+    border: 3px solid var(--celadon);
+}
+
 /* link styling for each flag within the main body */
 a {
     font-family:  var(--littletwig);
@@ -246,6 +250,18 @@ a {
     text-align: center;
     padding-right: 70px;
     padding-left: 70px;
+}
+
+.contact-info {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: fit-content;
+    height: 5rem;
+    margin: 10px auto;
+    background-color: var(--deepred);
+    padding: 5px 10px;
+    border-radius: 15px;
 }
 
 /* styling for admin login page form */
@@ -393,11 +409,21 @@ label {
 }
 
 .input-form > fieldset > label > input, .input-form > fieldset > div > label > textarea {
-    display: block;
-    /* flex-direction: column; */
+    /* display: block;
     width: 25vw;
     min-width: 150px;
-    margin: 0 auto;
+    margin: 0 auto; */
+/* trying out these settings */
+    height: 10vh;
+    max-height: 40px;
+    min-height: 30px;
+    width: 20vw;
+    max-width: 200px;
+    min-width: 100px;
+    margin: 15px 5px;
+    border-radius: 5px;
+    border: 2px solid var(--greengray);
+    box-shadow: 2px 1px 8px var(--greengray);
 }
 
 /* .shareWarning {
@@ -411,14 +437,21 @@ label {
     padding: 3px;
 } */
 
-.toSearchPageP {
-    margin: 0 auto;
-    margin-top: 25px;
-}
 
 .toSearchPage {
-    text-transform: uppercase;
-    font-size: 1.6rem;
+
+    margin: 25px auto;
+    overflow-wrap: break-word;
+}
+
+.inline-link {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: lowercase;
+    background-color: var(--deepred);
+    color: var(--snow);
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 /* styling for the footer container */
@@ -507,6 +540,14 @@ footer {
         height: 7vh;
     }
 
+    .inline-link:visited {     
+        background-color: var(--greengray);
+        color: var(--deepred);
+        padding: 5px 10px;
+        border-radius: 5px;
+        }
+    }
+
 }
 /* TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -569,6 +610,12 @@ footer {
         display: none;
     }
 
+    .inline-link:visited {     
+        background-color: var(--greengray);
+        color: var(--deepred);
+        padding: 5px 10px;
+        border-radius: 5px;
+        } */
     
 }
 
@@ -687,6 +734,25 @@ footer {
         background-color: var(--greengray);
         color: var(--celadon);
         text-decoration: none;
+    }
+
+    .inline-link:visited {     
+        background-color: var(--greengray);
+        color: var(--deepred);
+        padding: 5px 10px;
+        border-radius: 5px;
+        }
+
+    .contact-info {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        width: fit-content;
+        height: 5rem;
+        margin: 10px auto;
+        background-color:#ffffff;
+        color: var(--deepred);
+        padding: 5px 10px;
     }
 
     /* styling volunteer/help page forms/inputs */
