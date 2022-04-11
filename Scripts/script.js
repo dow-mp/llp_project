@@ -1,46 +1,36 @@
-// temporarily change the color of the div border for main links on the home page when they are moused over
-// const changeFlag1Color = () => {
-//     document.querySelector(".flag1").style.borderColor = "#247BA0";
-// }
-
-// const flag1ColorReverse = () => {
-//     document.querySelector(".flag1").style.borderColor = "#CBD4C2";
-// };
-
-// const changeFlag2Color = () => {
-//     document.querySelector(".flag2").style.borderColor = "#247BA0"
-// };
-
-// const flag2ColorReverse = () => {
-//     document.querySelector(".flag2").style.borderColor = "#CBD4C2";
-// };
-
-// const changeFlag3Color = () => {
-//     document.querySelector(".flag3").style.borderColor = "#247BA0"
-// };
-    
-// const flag3ColorReverse = () => {
-//     document.querySelector(".flag3").style.borderColor = "#CBD4C2";
-// };
-
-// const changeFlag4Color = () => {
-//     document.querySelector(".flag4").style.borderColor = "#247BA0"
-// };
-
-// const flag4ColorReverse = () => {
-//     document.querySelector(".flag4").style.borderColor = "#CBD4C2";
-// };
-
-// onmouseenter="changeFlag2Color()" onmouseleave="flag2ColorReverse()"
-
-
 // WORK IN PROGRESS
-const flags = document.querySelectorAll("flag");
-const changeFlagColor = (e) => {
-    document.querySelectorAll("flag").forEach(flag=>{
-        flag.classList.toggle("flagClicked");
-    })
+// declare each flag box on home.html as a variable
+const flag1 = document.querySelector(".flag1"); console.log(flag1);
+const flag2 = document.querySelector(".flag2"); console.log(flag2);
+const flag3 = document.querySelector(".flag3"); console.log(flag3);
+const flag4 = document.querySelector(".flag4"); console.log(flag4);
+
+// create event handlers for each flag to toggle class to change border color
+const changeFlag1Color = () => {
+    flag1.classList.toggle("flagClicked")
 };
 
-flags.forEach(flag=>{flag.addEventListener("mouseenter", changeFlagColor)});
-flags.forEach(flag=>{flag.addEventListener("mouseleave", changeFlagColor)});
+const changeFlag2Color = () => {
+    flag2.classList.toggle("flagClicked")
+};
+
+const changeFlag3Color = () => {
+    flag3.classList.toggle("flagClicked")
+};
+
+const changeFlag4Color = () => {
+    flag4.classList.toggle("flagClicked")
+};
+
+// add event listeners for each flag to toggle the celadon border color on and off
+flag1.addEventListener("mouseenter", changeFlag1Color);
+flag1.addEventListener("mouseleave", changeFlag1Color);
+
+flag2.addEventListener("mouseenter", changeFlag2Color);
+flag2.addEventListener("mouseleave", changeFlag2Color);
+
+flag3.addEventListener("mouseenter", changeFlag3Color);
+flag3.addEventListener("mouseleave", changeFlag3Color);
+
+flag4.addEventListener("mouseenter", changeFlag4Color);
+flag4.addEventListener("mouseleave", changeFlag4Color);

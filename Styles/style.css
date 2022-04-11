@@ -193,10 +193,6 @@ html, body {
 
 }
 
-.flagClicked {
-    border: 3px solid var(--celadon);
-}
-
 /* link styling for each flag within the main body */
 a {
     font-family:  var(--littletwig);
@@ -439,14 +435,15 @@ label {
 
 
 .toSearchPage {
-
     margin: 25px auto;
     overflow-wrap: break-word;
+    /* box-shadow: 2px 1px 8px; */
+    /* work on this box-shadow to match the shadow on inputs/submits etc */
 }
 
 .inline-link {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-transform: lowercase;
+    text-transform: uppercase;
     background-color: var(--deepred);
     color: var(--snow);
     font-size: 1rem;
@@ -717,6 +714,12 @@ footer {
         margin: 15px 0; 
     }
 
+
+    .flagClicked {
+        border: 3px solid var(--celadon);
+        color: var(--celadon);
+    }
+
     .main-link:link {
         color: var(--deepred);
     }
@@ -741,6 +744,7 @@ footer {
         color: var(--deepred);
         padding: 5px 10px;
         border-radius: 5px;
+        text-transform: lowercase;
         }
 
     .contact-info {
