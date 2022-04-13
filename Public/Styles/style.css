@@ -34,7 +34,7 @@ html, body {
 
 /* header banner styling */
 .top-banner {
-    background-image: url(../Media/Images/Marine_Park_td_2019-05-24_063_-_Lenape_Playground.png);
+    background-image: url(../../Public/Media/Images/Marine_Park_td_2019-05-24_063_-_Lenape_Playground.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -144,7 +144,7 @@ html, body {
     padding-top: 20px;
     font-family: var(--sapodilla);
     /* color: var(--snow); */
-    font-size: 0.8rem;
+    font-size: 1.75rem;
     text-align: center;
     width: 70vw;
     margin: 0 auto;
@@ -463,12 +463,20 @@ footer {
     justify-content: space-around;
     align-items: flex-end;
     background-color: var(--deepred);
-    height: 75px;
+    height: 100px;
     width: 100%;
     /* margin: 0 -8px; */
     font-size: 1.75rem;
     /* margin-top: 40px; */
     /* padding-top: 60px; */
+}
+
+.footer-legal {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding: 5px;
 }
 
 /* styling for links within the footer */
@@ -481,10 +489,26 @@ footer {
 .copyright {
     color: var(--snow);
     font-family: var(--sapodilla);
-    margin: 0 15px;
+    margin: 5px 15px;
     margin-bottom: 5px;
 }
 
+.photo-cred {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 5px auto;
+    margin-bottom: 1px;
+    color: var(--snow);
+    font-size: 0.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+}
+
+.photo-att-link:link, .photo-att-link:visited, .photo-att-link:hover, .photo-att-link:active {
+    text-decoration: underline;
+    color: var(--snow);
+    font-size: 0.5rem;
+}
 
 
 
@@ -568,7 +592,7 @@ footer {
     }
 
     .blurb {
-        font-size: 1.75rem;
+        font-size: 2.5rem;
     }
 
     .main-body {
