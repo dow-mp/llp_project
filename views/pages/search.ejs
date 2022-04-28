@@ -1,0 +1,54 @@
+<%- include('../partials/head') -%>
+<%- include('../partials/header') -%>
+
+    <div class="search-div">
+        <h1 class="blurb">search for a local park</h1>
+        <div class="map-box">
+            <!-- Insert Map Here -->
+        </div>
+        <div class="map-table">
+            <!-- List of All Parks within the search radius should Display Here -->
+            <table class="search-table">
+                <thead class="table-headers">
+                    <tr>
+                        <th>Park</th>
+                        <th>Street Address</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Needs Help</th>
+                        <th>Got Some Love</th>
+                   </tr>
+                </thead>
+                <!-- as people mouse over a specific park - is it possible to highlight that pin on the map? -->
+                <tbody>
+                    <tr>
+                        <td>Sample Park</td>
+                        <td>123 Sample St</td>
+                        <td>Sample City</td>
+                        <td>Sa</td>
+                        <td><input type="checkbox"/></td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>Sample Park</td>
+                        <td>123 Sample St</td>
+                        <td>Sample City</td>
+                        <td>Sa</td>
+                        <td><input type="checkbox"/></td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>Sample Park</td>
+                        <td>123 Sample St</td>
+                        <td>Sample City</td>
+                        <td>Sa</td>
+                        <td><input type="checkbox"/></td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                <!-- data will be supplied based on map search area -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+<%- include('../partials/footer') -%>

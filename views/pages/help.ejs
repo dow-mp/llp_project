@@ -1,0 +1,30 @@
+<%- include('../partials/head') -%>
+<%- include('../partials/header') -%>
+
+    <div class="input-form-div">
+        <h1 class="form-headline">Get Help for Your Local Park</h1>
+        <form class="input-form">
+            <fieldset>
+                <label for="parkName"> Park name:
+                    <input id="parkName" type="text" required>
+                </label>
+                <label for="parkAddress"> Park address:
+                    <input id="parkAddress" type="text" required>
+                </label>
+                <div class="formText">
+                    <label for="helpText"> Please explain the problem:
+                        <textarea id="helpText" rows="3"></textarea>
+                    </label>
+                </div>
+                <label for="userName"> Your name:
+                    <input id="userName" type="text">
+                </label>
+                <label for="userEmail"> Your email:
+                    <input id="userEmail" type="email">
+                </label>
+            </fieldset>
+            <input type="submit" class="center-submit">
+        </form>
+        </div>
+
+<%- include('../partials/header') -%>

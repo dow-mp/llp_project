@@ -1,0 +1,42 @@
+<%- include('../partials/head') -%>
+<%- include('../partials/header') -%>
+
+    <div class="input-form-div">
+        <h1 class="form-headline blurb">Volunteer to Clean Up A Park</h1>
+        <form class="input-form">
+            <fieldset>
+            <label for="parkName"> Park name:
+                <input id="parkName" type="text" required>
+            </label>
+            <label for="parkAddress"> Park address:
+                <input id="parkAddress" type="text" required>
+            </label>
+            <label for="volunteerDate"> When do you plan to clean up?
+                <input id="volunteerDate" type="date">
+            </label>
+            <label for="volunteerTime"> What time do you plan to be there?
+                <input id="volunteerTime" type="time">
+            </label>
+            <label for="userName"> Your name:
+                <input id="userName" type="text">
+            </label>
+            <label for="userEmail"> Your email:
+                <input id="userEmail" type="email">
+            </label>
+            </fieldset>
+            <label for="moreVolunteers" class="postToSocialLabel"> Would you like us to post this information to our social media so others can join you?
+                <input id="moreVolunteers" type="checkbox">
+            </label>
+            <!-- <p class="shareWarning">We will never publish your name or email on our social media without explicit<br> consent. Clicking the checkbox above does NOT assume written consent.</p> -->
+            <input type="submit" class="center-submit">
+
+
+            <!-- </p> -->
+        </form>
+
+        <div class="toSearchPage">
+            <a class="main-link inline-link" href="./search.html" referrerpolicy="noopener noreferrer" target="_blank"> SEARCH LOCAL PARKS</a>
+        </div>
+    </div>
+
+<%- include('../partials/footer') -%>
