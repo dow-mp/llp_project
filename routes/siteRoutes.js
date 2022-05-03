@@ -8,4 +8,7 @@ router.route('/')
 router.route('/about')
     .get(siteCtrl.about)
 
+router.route('/success')
+    .get(siteCtrl.success)
+
 module.exports = router;

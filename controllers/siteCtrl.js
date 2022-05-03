@@ -2,13 +2,18 @@ const siteData = require('../data/siteData');
 
 module.exports = {
     index: (req, res) => {
-        ('pages/index', {
+        ('/pages/index', {
             copyrightYear: siteData.year 
         })
     },
     about: (req, res) => {
-        ('pages/about', {
+        ('/pages/about', {
         copyrightYear: siteData.year
         })
     },
+    success: (req, res) => {
+        ('/pages/success', {
+            copyrightYear: siteData.year
+        })
+    }
 }
