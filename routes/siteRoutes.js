@@ -11,4 +11,8 @@ router.route('/about')
 router.route('/success')
     .get(siteCtrl.success)
 
+// making this its own route for now - worried this will become bigger with the addition of the API map - NO, I don't think this needs its own router/controller files
+router.route('/search')
+    .get(siteCtrl.search)
+
 module.exports = router;

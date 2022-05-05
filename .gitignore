@@ -1,2 +1,5 @@
 /Media/Planning
-node_modules
+node_modules/
+.env
+searchCtrl.js
+searchRoutes.js

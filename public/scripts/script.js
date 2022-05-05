@@ -34,3 +34,11 @@ flag3.addEventListener("mouseleave", changeFlag3Color);
 
 flag4.addEventListener("mouseenter", changeFlag4Color);
 flag4.addEventListener("mouseleave", changeFlag4Color);
+
+
+// separate park address input into separate fields (i.e. street number, street, street listing type, city, state, country) ????
+// const parkAddress = document.querySelector("#parkAddress").value
+// console.log(parkAddress);
+// const parkArray = parkAddress.split(" ");
+// console.log(parkArray);
+

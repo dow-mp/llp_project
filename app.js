@@ -15,6 +15,8 @@ app.use(methodOverride('_method'));
 app.use(morgan('dev'));
 app.use(routes);
 
+require('./config/connection');
+
 app.listen(PORT, () => {
     console.log(`The server is listening at port ${PORT}.`)
 });
