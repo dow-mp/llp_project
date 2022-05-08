@@ -2,8 +2,10 @@ const express = require('express');
 const volunteerCtrl = require('../controllers/volunteerCtrl');
 const router = express.Router();
 
-router.route('/volunteer')
+router.route('/')
     .get(volunteerCtrl.volunteer_form)
-    .post(volunteerCtrl.volunteer_form_post)
+
+router.route('/add-volunteer')
+    .post(volunteerCtrl.createVolunteer)
 
 module.exports = router;

@@ -1,8 +1,7 @@
 const express = require('express');
 
 const siteRoutes = require('./siteRoutes');
-const searchRoutes = require('./searchRoutes');
-const helpRoutes = require('./helpRoutes');
+const parkRoutes = require('./parkRoutes');
 const adminRoutes = require('./adminRoutes');
 const volunteerRoutes = require('./volunteerRoutes');
 
@@ -18,7 +17,7 @@ router.use('/admin', adminRoutes);
 router.use('/volunteer', volunteerRoutes);
 
 // includes routes to controllers for users to create data using the form and read the form itself (CR)
-router.use('/help', helpRoutes);
+router.use('/park', parkRoutes);
 
 
 module.exports = router;

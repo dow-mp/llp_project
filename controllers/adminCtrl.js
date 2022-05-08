@@ -1,63 +1,129 @@
 const siteData = require('../data/siteData');
+const Park = require('../models/parkModel');
+const Volunteer = require('../models/volunteerModel');
 
 module.exports = {
-    admin: 
-    // get all parks in need of help
-    park_all: (req, res) => {
-        // this callback fx will be retrieving data from the database to access stored form data submitted from the help page
+    admin: (reg, res) => {
+        res.render('pages/admin', {
+            copyrightYear: siteData.year
+        });
     },
 
-    // update/edit a single submission from a user
+    park_all: (req, res) => {
+        Park.find({}, (error, allParks) => {
+            if(error) {
+                return error;
+            } else {
+                res.render('pages/parkReview', {
+                    copyrightYear: siteData.year,
+                    allParks: allParks
+                });
+            }
+        });
+    },
+
+    park_update_get: (req, res) => {
+        const {_id} = req.params;
+        Park.find({_id: _id}, (error, foundPark) => {
+            if(error) {
+                return error;
+            } else {
+                res.render('pages/parkUpdate', {
+                    copyrightYear: siteData.year,
+                    foundPark: foundPark
+                });
+            }
+        });
+    },
+
+    // this may belong in the park controller file
     park_update_put: (req, res) => {
-        // this id variable may change depending on how ids are stored in mongodb - we will be querying the request for the id from mongo instead of UUID
         const { _id } = req.params;
         const {parkName, parkAddress, helpText, userName, userEmail} = req.body;
-        // parkData is referring to an array of parks that presumably would have been stored in the data file here, however, this will eventually be querying the database to find a match
-        const foundPark = parkData.find(park => park._id === String(_id));
-        foundPark.parkName = parkName;
-        foundPark.parkAddress = parkAddress;
-        foundPark.helpText = helpText;
-        foundPark.userName = userName;
-        foundPark.userEmail = userEmail; 
-
-        res.redirect("/admin-console");
+        Park.findByIdAndUpdate(_id, {$set: {
+            parkName: parkName,
+            parkAddress: parkAddress, 
+            helpText: helpText,
+            userName: userName,
+            userEmail: userEmail
+        }}, {new: true}, error => {
+            if(error) {
+                return error;
+            } else {
+                res.redirect('/')
+            }
+        });
     },
 
-    // delete a submission from a user
+    // this may belong in the park controller
     park_delete: (req, res) => {
         const {_id} = req.params;
-        const foundPark = parkData.find(park => park._id === String(_id));
-        const index = parkData.indexOf(foundPark);
-        parkData.splice(index, 1);
-        res.redirect('/admin-console')
+        Park.deleteOne({_id: _id}, error => {
+            if(error) {
+                return error;
+            } else {
+                res.redirect('/')
+            }
+        })
     },
 
-    // get all volunteer listings
-    volunteer_all:,
+    volunteer_all: (reg, res) => {
+        Volunteer.find({}, (error, allVolunteers) => {
+            if(error) {
+                return error;
+            } else {
+                res.render('pages/volunteerReview', {
+                    copyrightYear: siteData.year,
+                    allVolunteers: allVolunteers
+                });
+            }
+        })
+    },
+
+    volunteer_update_get: (req, res) => {
+        const {_id} = req.params;
+        Volunteer.find({_id: _id}, (error, foundVolunteer) => {
+            if(error) {
+                return error;
+            } else {
+                res.render('pages/volunteerUpdate', {
+                    copyrightYear: siteData.year,
+                    foundVolunteer: foundVolunteer
+                });
+            }
+        });
+    },
 
     // update/edit a single submission from a user
     volunteer_update_put: (req, res) => {
         const { _id } = req.params;
         const {parkName, parkAddress, volunteerDate, volunteerTime, userName, userEmail, moreVolunteers} = req.body;
-        // parkData is referring to an array of parks that presumably would have been stored in the data file here, however, this will eventually be querying the database to find a match
-        const foundPark = parkData.find(park => park._id === String(_id));
-        foundPark.parkName = parkName;
-        foundPark.parkAddress = parkAddress;
-        foundPark.volunteerDate = volunteerDate;
-        foundPark.volunteerTime = volunteerTime;
-        foundPark.userName = userName;
-        foundPark.userEmail = userEmail; 
-        foundPark.moreVolunteers = moreVolunteers;
-
-        res.redirect("/admin-console");
+        Volunteer.findByIdAndUpdate(_id, {$set: {
+            parkName: parkName,
+            parkAddress: parkAddress,
+            volunteerDate: volunteerDate,
+            volunteerTime: volunteerTime,
+            userName: userName,
+            userEmail: userEmail,
+            moreVolunteers: moreVolunteers
+        }}, {new: true}, error => {
+            if(error) {
+                return error;
+            } else {
+                res.redirect('/');
+            }
+        });
     },
 
     // delete a submission from a user
     volunteer_delete: (req, res) => {
         const {_id} = req.params;
-        const foundPark = parkData.find(park => park._id === String(_id));
-        const index = parkData.indexOf(foundPark);
-        parkData.splice(index, 1);
-        res.redirect('/admin-console')
+        Volunteer.deleteOne({_id: _id}, error => {
+            if(error) {
+                return error;
+            } else {
+                res.redirect('/')
+            }
+        })
     },
 }

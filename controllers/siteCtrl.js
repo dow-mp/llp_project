@@ -20,5 +20,10 @@ module.exports = {
         res.render('pages/search', {
             copyrightYear: siteData.year
         })
+    },
+    thanks: (req, res) => {
+        res.render('pages/thanks', {
+            copyrightYear: siteData.year
+        })
     }
 }
