@@ -8,7 +8,7 @@ const volunteerSchema = new Schema({
         minlength: [2, 'minimum length required is 2 characters']
     },
     parkAddress: {
-        type: Mixed,
+        type: String,
         required: [true, "Please enter a street, city, and state."],
         minlength: [2, 'minimum length required is 2 characters']
     },
