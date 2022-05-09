@@ -13,36 +13,16 @@
                 <th>Post on social?</th>
            </tr>
         </thead>
-        <!-- as people mouse over a specific park - is it possible to highlight that pin on the map? -->
         <tbody>
-            <tr>
-                <td>park name</td>
-                <td>address</td>
-                <td>planned date</td>
-                <td>planned time</td>
-                <td>name</td>
-                <td>email</td>
-                <td><input type="checkbox"/></td>
-            </tr>
-            <tr>
-                <td>park name</td>
-                <td>address</td>
-                <td>planned date</td>
-                <td>planned time</td>
-                <td>name</td>
-                <td>email</td>
-                <td><input type="checkbox"/></td>
-            </tr>
-            <tr>
-                <td>park name</td>
-                <td>address</td>
-                <td>planned date</td>
-                <td>planned time</td>
-                <td>name</td>
-                <td>email</td>
-                <td><input type="checkbox"/></td>
-            </tr>
-        <!-- data will be supplied based on map search area -->
+            <% for (volunteer of allVolunteers) { %>
+                <td><%= volunteer.parkName %></td>
+                <td><%= volunteer.parkAddress %></td>
+                <td><%= volunteer.volunteerDate %></td>
+                <td><%= volunteer.volunteerTime %></td>
+                <td><%= volunteer.userName %></td>
+                <td><%= volunteer.userEmail %></td>
+                <td><%= volunteer.moreVolunteers %></td>
+            <% } %>
         </tbody>
     </table>
 

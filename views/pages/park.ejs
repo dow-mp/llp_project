@@ -3,21 +3,21 @@
 
     <div class="input-form-div">
         <h1 class="form-headline">Get Help for Your Local Park</h1>
-        <form class="input-form">
+        <form class="input-form" action="/park" method="POST">
             <fieldset>
                 <label for="parkName"> Park name:
-                    <input id="parkName" type="text" required>
+                    <input id="parkName" type="text" minlength="2" required>
                 </label>
                 <label for="parkAddress"> Park address:
-                    <input id="parkAddress" type="text" required>
+                    <input id="parkAddress" type="text" minlength="4" required>
                 </label>
                 <div class="formText">
                     <label for="helpText"> Please explain the problem:
-                        <textarea id="helpText" rows="3"></textarea>
+                        <textarea id="helpText" rows="3" minlength="10" required></textarea>
                     </label>
                 </div>
                 <label for="userName"> Your name:
-                    <input id="userName" type="text">
+                    <input id="userName" type="text" >
                 </label>
                 <label for="userEmail"> Your email:
                     <input id="userEmail" type="email">

@@ -3,13 +3,13 @@
 
     <div class="input-form-div">
         <h1 class="form-headline blurb">Volunteer to Clean Up A Park</h1>
-        <form class="input-form">
+        <form class="input-form" action="/volunteer" method="POST">
             <fieldset>
             <label for="parkName"> Park name:
-                <input id="parkName" type="text" required>
+                <input id="parkName" type="text" minlength="2" required>
             </label>
             <label for="parkAddress"> Park address:
-                <input id="parkAddress" type="text" required>
+                <input id="parkAddress" type="text" minlength="4" required>
             </label>
             <label for="volunteerDate"> When do you plan to clean up?
                 <input id="volunteerDate" type="date">
@@ -18,10 +18,10 @@
                 <input id="volunteerTime" type="time">
             </label>
             <label for="userName"> Your name:
-                <input id="userName" type="text">
+                <input id="userName" type="text" minlength="1" required>
             </label>
             <label for="userEmail"> Your email:
-                <input id="userEmail" type="email">
+                <input id="userEmail" type="email" minlength="5" required>
             </label>
             </fieldset>
             <label for="moreVolunteers" class="postToSocialLabel"> Would you like us to post this information to our social media so others can join you?
