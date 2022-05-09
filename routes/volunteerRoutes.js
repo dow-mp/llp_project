@@ -4,8 +4,10 @@ const router = express.Router();
 
 router.route('/')
     .get(volunteerCtrl.volunteer_form)
-
-router.route('/add-volunteer')
     .post(volunteerCtrl.createVolunteer)
+
+router.route('/:_id')
+    .put(volunteerCtrl.volunteer_update_put)
+    .delete(volunteerCtrl.volunteer_delete)
 
 module.exports = router;

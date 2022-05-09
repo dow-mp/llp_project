@@ -24,12 +24,4 @@ router.route('/add-volunteer')
 router.route('/:_id/edit-volunteer')
     .get(adminCtrl.volunteer_update_get)
 
-// I don't think this belongs here...
-router.route('/:_id/delete-park')
-    .get(adminCtrl.park_delete)
-
-// I don't think this belongs here...
-router.route('/:_id/delete-volunteer')
-    .get(adminCtrl.volunteer_delete)
-
 module.exports = router;
