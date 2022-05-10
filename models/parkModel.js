@@ -7,23 +7,37 @@ const parkSchema = new Schema({
         required: [true, 'Please enter a valid park name.'],
         minlength: [2, 'minimum length required is 2 characters']
     },
-    parkAddress: {
+    parkStreet: {
         type: String,
         required: [true, "Please enter a street, city, and state."],
         minlength: [2, 'minimum length required is 2 characters']
     },
+    parkCity: {
+        type: String,
+        required: [true, "Please enter a street, city, and state."],
+        minlength: [2, 'minimum length required is 2 characters']
+    },
+    parkState: {
+        type: String,
+        required: [true, "Please enter a street, city, and state."],
+        minlength: [2, 'minimum length required is 2 characters'],
+        maxlength: [2, 'maximum length accepted is 2 characters']
+    },
+    parkZip: {
+        type: Number,
+        required: [true, "Please enter a street, city, and state."],
+        minlength: [2, 'minimum length required is 2 characters']
+    },
     helpText: {
-        type: String
+        type: String,
+        required: [true, "Please explain the problem."],
+        minlength: [10, 'minimum length required is 10 characters']
     },
     userName: {
-        type: String,
-        required: [true, "Please enter your name."],
-        minlength: [1, 'minimum length required is 1 character']
+        type: String
     },
     userEmail: {
-        type: String,
-        required: [true, "Please enter your email address."],
-        minlength: [6, 'minimum length required is 6 characters']
+        type: String
     }
 });
 

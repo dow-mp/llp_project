@@ -10,6 +10,8 @@ module.exports = {
 
     createPark: (req, res) => {
         const {parkName, parkAddress, helpText, userName, userEmail} = req.body;
+        // adding console logging to check entries 2' validatorError issue occuring in mongoose
+        console.log(req.body);
         const newPark = new Park({
             parkName: parkName, 
             parkAddress: parkAddress,

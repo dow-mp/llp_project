@@ -28,13 +28,13 @@ html, body {
     padding: 0px;
 }
 
-.main-div {
+/* .main-div {
     height: 100vh;
-}
+} */
 
 /* header banner styling */
 .top-banner {
-    background-image: url(../Media/Images/Marine_Park_td_2019-05-24_063_-_Lenape_Playground.png);
+    background-image: url(/media/images/Marine_Park_td_2019-05-24_063_-_Lenape_Playground.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -210,16 +210,29 @@ a {
     color: var(--snow);
 }
 
-.main-link:hover, .nav-word:hover {
+.main-link:hover {
     background-color: var(--celdaon);
     text-decoration: none;
     color: var(--snow);
+    border-radius: 3px;
+    padding: 0 5px;
+}
+
+.nav-word:hover {
+    background-color: var(--snow);
+    text-decoration: none;
+    color: var(--celadon);
+    border-radius: 3px;
+    padding: 0 5px;
 }
 
 .main-link:active, .nav-word:active {
     text-decoration: none;
     background-color: var(--greengray);
     color: var(--black);
+    border-radius: 3px;
+    margin: 3px;
+    padding: 0 5px;
 }
 
 /* styling for the about page information section */
@@ -377,34 +390,36 @@ th {
 .input-form {
     display: flex;
     flex-direction: column;
+    width: fit-content;
     margin: 20px auto;
+    /* margin-top: 20px; */
     border: 3px solid var(--greengray);
     padding: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    align-content: center;
+    /* align-content: center; */
+    align-items: right;
 }
 
-.input-form > fieldset {
+/* trying to line form inputs up to neaten them up - cannot get them to align along the right edges!!! */
+.form-items {
     display: flex;
     flex-direction: column;
-    border: none;
-    align-items: center;
+    align-items: flex-end;
+    /* justify-content: left; */
     margin: 0 auto;
-    /* justify-items: space-between; */
+    width: fit-content;
+    border: none;
 }
-
-/* .formText *{
-    vertical-align: middle;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-} */
 
 label {
     margin-top: 15px;
     max-width: 150px;
-    overflow-wrap: break-word;
+    /* margin: 0 auto; */
+    padding: 2px;
+    /* overflow-wrap: break-word; */
 }
 
-.input-form > fieldset > label > input, .input-form > fieldset > div > label > textarea {
+.label-input-pair > input, .label-input-pair > textarea, .vp-form {
     /* display: block;
     width: 25vw;
     min-width: 150px;
@@ -416,7 +431,45 @@ label {
     width: 20vw;
     max-width: 200px;
     min-width: 100px;
-    margin: 15px 5px;
+    margin-top: 2px;
+    border-radius: 5px;
+    border: 2px solid var(--greengray);
+    box-shadow: 2px 1px 8px var(--greengray);
+}
+
+.label-checkbox-pair {
+    margin-top: 10px;
+}
+
+.label-checkbox-pair > input {
+    margin-top: 2px;
+    border-radius: 5px;
+    border: 2px solid var(--greengray);
+    box-shadow: 2px 1px 8px var(--greengray);
+}
+
+#parkAddress, .label-input-pair {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    /* margin: 0 auto; */
+    padding: 2px;
+}
+
+.park-address {
+    display: flex;
+    flex-direction: column;
+}
+
+.park-address > input {
+    height: 10vh;
+    max-height: 40px;
+    min-height: 30px;
+    width: 20vw;
+    max-width: 200px;
+    min-width: 100px;
+    margin-top: 2px;
     border-radius: 5px;
     border: 2px solid var(--greengray);
     box-shadow: 2px 1px 8px var(--greengray);
@@ -432,7 +485,6 @@ label {
     margin: 10px auto;
     padding: 3px;
 } */
-
 
 .toSearchPage {
     margin: 25px auto;
@@ -545,10 +597,8 @@ footer {
         }
     }
 
-}
 /* TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-
     .nav-bar {
         background-color: var(--deepred);
         /* border: 1px solid var(--snow); */
@@ -612,13 +662,11 @@ footer {
         color: var(--deepred);
         padding: 5px 10px;
         border-radius: 5px;
-        } */
-    
+        } */ 
 }
 
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
-
     #logo {
         filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
     /* the code below can be inserted into the filter property above to change the color of the svg to the deep red color included with the color scheme */
@@ -840,5 +888,4 @@ footer {
         text-transform: uppercase;
         font-size: 1.6rem;
     }
-
 }

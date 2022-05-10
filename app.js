@@ -1,10 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const path = require('path');
 const app = express();
 const routes = require('./routes/indexRoutes')
-const PORT = 3000;
+const PORT = 5000;
 
 app.set('view engine', 'ejs');
 

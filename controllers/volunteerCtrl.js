@@ -3,13 +3,15 @@ const Volunteer = require('../models/volunteerModel');
 
 module.exports = {
     volunteer_form: (req, res) => {
-        res.render('/pages/volunteer', {
+        res.render('pages/volunteer', {
             copyrightYear: siteData.year
         });
     },
 
     createVolunteer: (req, res) => {
         const {parkName, parkAddress, volunteerDate, volunteerTime, userName, userEmail, moreVolunteers} = req.body;
+        // adding console logging to check entries 2' validatorError issue occuring in mongoose
+        console.log(req.body);
         const newVolunteer = new Volunteer({
             parkName: parkName,
             parkAddress: parkAddress,

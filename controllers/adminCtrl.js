@@ -36,6 +36,12 @@ module.exports = {
         });
     },
 
+    create_park: (req, res) => {
+        res.render('pages/park', {
+            copyrightYear: siteData.year
+        });
+    },
+
     volunteer_all: (reg, res) => {
         Volunteer.find({}, (error, allVolunteers) => {
             if(error) {
@@ -61,5 +67,11 @@ module.exports = {
                 });
             }
         });
-    }
+    },
+
+    create_volunteer: (req, res) => {
+        res.render('pages/volunteer', {
+            copyrightYear: siteData.year
+        });
+    },
 }

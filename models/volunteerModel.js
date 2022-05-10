@@ -7,10 +7,25 @@ const volunteerSchema = new Schema({
         required: [true, 'Please enter a valid park name.'],
         minlength: [2, 'minimum length required is 2 characters']
     },
-    parkAddress: {
+    parkStreet: {
         type: String,
         required: [true, "Please enter a street, city, and state."],
-        minlength: [2, 'minimum length required is 2 characters']
+        minlength: [2, 'minimum length required is 4 characters']
+    },
+    parkCity: {
+        type: String,
+        required: [true, "Please enter a street, city, and state."],
+        minlength: [2, 'minimum length required is 4 characters']
+    },
+    parkState: {
+        type: String,
+        required: [true, "Please enter a street, city, and state."],
+        minlength: [2, 'minimum length required is 4 characters']
+    },
+    parkZip: {
+        type: String,
+        required: [true, "Please enter a street, city, and state."],
+        minlength: [2, 'minimum length required is 4 characters']
     },
     volunteerDate: {
         type: Date,
@@ -26,7 +41,7 @@ const volunteerSchema = new Schema({
     userEmail: {
         type: String,
         required: [true, "Please enter your email address."],
-        minlength: [6, 'minimum length required is 6 characters']
+        minlength: [6, 'minimum length required is 5 characters']
     },
     moreVolunteers: {
         type: Boolean
