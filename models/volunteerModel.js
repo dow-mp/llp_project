@@ -10,22 +10,24 @@ const volunteerSchema = new Schema({
     parkStreet: {
         type: String,
         required: [true, "Please enter a street, city, and state."],
-        minlength: [2, 'minimum length required is 4 characters']
+        minlength: [2, 'minimum length required is 2 characters']
     },
     parkCity: {
         type: String,
         required: [true, "Please enter a street, city, and state."],
-        minlength: [2, 'minimum length required is 4 characters']
+        minlength: [2, 'minimum length required is 2 characters']
     },
     parkState: {
         type: String,
         required: [true, "Please enter a street, city, and state."],
-        minlength: [2, 'minimum length required is 4 characters']
+        minlength: [2, 'minimum length required is 2 characters'],
+        maxlength: [2, 'maximum length required is 2 characters']
     },
     parkZip: {
-        type: String,
+        type: Number,
         required: [true, "Please enter a street, city, and state."],
-        minlength: [2, 'minimum length required is 4 characters']
+        minlength: [5, 'minimum length required is 5 characters'],
+        maxlength: [5, 'minimum length required is 5 characters']
     },
     volunteerDate: {
         type: Date,

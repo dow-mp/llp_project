@@ -7,14 +7,30 @@ module.exports = {
             copyrightYear: siteData.year
         });
     },
+    park_detail: (req, res) => {
+        const {_id} = req.params;
+        Park.findOne({_id: _id}, (error, foundPark) => {
+            if(error) {
+                return error
+            } else {
+                res.render('/pages/parkUpdate', {
+                    copyrightYear: siteData.year,
+                    foundPark: foundPark
+                });
+            }
+        })
+    },
 
     createPark: (req, res) => {
-        const {parkName, parkAddress, helpText, userName, userEmail} = req.body;
+        const {parkName, parkStreet, parkCity, parkState, parkZip, helpText, userName, userEmail} = req.body;
         // adding console logging to check entries 2' validatorError issue occuring in mongoose
         console.log(req.body);
         const newPark = new Park({
             parkName: parkName, 
-            parkAddress: parkAddress,
+            parkStreet: parkStreet,
+            parkCity: parkCity,
+            parkState: parkState,
+            parkZip: parkZip,
             helpText: helpText,
             userName: userName,
             userEmail: userEmail
@@ -27,10 +43,13 @@ module.exports = {
 
     park_update_put: (req, res) => {
         const { _id } = req.params;
-        const {parkName, parkAddress, helpText, userName, userEmail} = req.body;
+        const {parkName, parkStreet, parkCity, parkState, parkZip, helpText, userName, userEmail} = req.body;
         Park.findByIdAndUpdate(_id, {$set: {
             parkName: parkName,
-            parkAddress: parkAddress, 
+            parkStreet: parkStreet,
+            parkCity: parkCity,
+            parkState: parkState,
+            parkZip: parkZip,
             helpText: helpText,
             userName: userName,
             userEmail: userEmail
@@ -38,7 +57,7 @@ module.exports = {
             if(error) {
                 return error;
             } else {
-                res.redirect('/')
+                res.redirect('/admin/parks')
             }
         });
     },
@@ -50,7 +69,7 @@ module.exports = {
             if(error) {
                 return error;
             } else {
-                res.redirect('/admin')
+                res.redirect('/admin/parks')
             }
         })
     }

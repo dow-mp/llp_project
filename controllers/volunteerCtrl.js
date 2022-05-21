@@ -8,13 +8,30 @@ module.exports = {
         });
     },
 
+    volunteer_detail: (req, res) => {
+        const {_id} = req.params;
+        Volunteer.findOne({_id: _id}, (error, foundVolunteer) => {
+            if(error) {
+                return error
+            } else {
+                res.render('/pages/volunteerUpdate', {
+                    copyrightYear: siteData.year,
+                    foundVolunteer: foundVolunteer
+                });
+            }
+        })
+    },
+
     createVolunteer: (req, res) => {
-        const {parkName, parkAddress, volunteerDate, volunteerTime, userName, userEmail, moreVolunteers} = req.body;
+        const {parkName, parkStreet, parkCity, parkState, parkZip, volunteerDate, volunteerTime, userName, userEmail, moreVolunteers} = req.body;
         // adding console logging to check entries 2' validatorError issue occuring in mongoose
         console.log(req.body);
         const newVolunteer = new Volunteer({
             parkName: parkName,
-            parkAddress: parkAddress,
+            parkStreet: parkStreet,
+            parkCity: parkCity, 
+            parkState: parkState,
+            parkZip: parkZip,
             volunteerDate: volunteerDate,
             volunteerTime: volunteerTime,
             userName: userName,
@@ -30,10 +47,13 @@ module.exports = {
     // update/edit a single submission from a user
     volunteer_update_put: (req, res) => {
         const { _id } = req.params;
-        const {parkName, parkAddress, volunteerDate, volunteerTime, userName, userEmail, moreVolunteers} = req.body;
+        const {parkName, parkStreet, parkCity, parkState, parkZip, volunteerDate, volunteerTime, userName, userEmail, moreVolunteers} = req.body;
         Volunteer.findByIdAndUpdate(_id, {$set: {
             parkName: parkName,
-            parkAddress: parkAddress,
+            parkStreet: parkStreet,
+            parkCity: parkCity,
+            parkState: parkState,
+            parkZip: parkZip,
             volunteerDate: volunteerDate,
             volunteerTime: volunteerTime,
             userName: userName,
@@ -55,7 +75,7 @@ module.exports = {
             if(error) {
                 return error;
             } else {
-                res.redirect('/admin')
+                res.redirect('/admin/volunteers')
             }
         })
     }

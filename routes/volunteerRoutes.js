@@ -7,6 +7,7 @@ router.route('/')
     .post(volunteerCtrl.createVolunteer)
 
 router.route('/:_id')
+    .get(volunteerCtrl.volunteer_detail)
     .put(volunteerCtrl.volunteer_update_put)
     .delete(volunteerCtrl.volunteer_delete)
 

@@ -3,28 +3,33 @@
 
     <div class="input-form-div">
         <h1 class="form-headline">Update a Park</h1>
-        <form class="input-form" action="/admin/<%=  %>/?_method=PUT">
+        <form class="input-form" action="/park/<%= foundPark._id %>/?_method=PUT" method="POST">
             <fieldset>
                 <label for="parkName"> Park name:
-                    <input id="parkName" type="text" required>
+                    <input id="parkName" name="parkName" type="text" value="<%= foundPark.parkName %>" minlength="2" required />
                 </label>
                 <label for="parkAddress"> Park address:
-                    <input id="parkAddress" type="text" required>
+                    <div class="park-address">
+                        <input id="parkStreet" name="parkStreet" placeholder="Street"  type="text" class="vp-form" value="<%= foundPark.parkStreet %>" minlength="2" required />
+                        <input id="parkCity" name="parkCity" placeholder="City" type="text" class="vp-form" value="<%= foundPark.parkCity %>" minlength="2" required />
+                        <input id="parkState" name="parkState" placeholder="State" type="text" class="vp-form" value="<%= foundPark.parkState %>" minlength="2" maxlength="2" required />
+                        <input id="parkZip" name="parkZip" placeholder="Zip" type="text" class="vp-form" value="<%= foundPark.parkZip %>" minlength="5" maxlength="5" required />
+                    </div>
                 </label>
                 <div class="formText">
                     <label for="helpText"> Please explain the problem:
-                        <textarea id="helpText" rows="3"></textarea>
+                        <textarea id="helpText" value="<%= foundPark.helpText %>" rows="3"><%= foundPark.helpText %></textarea>
                     </label>
                 </div>
                 <label for="userName"> Your name:
-                    <input id="userName" type="text">
+                    <input id="userName" name="userName" type="text" value="<%= foundPark.userName %>" />
                 </label>
                 <label for="userEmail"> Your email:
-                    <input id="userEmail" type="email">
+                    <input id="userEmail" name="userEmail" type="email" value="<%= foundPark.userEmail %>" />
                 </label>
             </fieldset>
             <input type="submit" class="center-submit">
         </form>
         </div>
 
-<%- include('../partials/header') -%>
+<%- include('../partials/footer') -%>

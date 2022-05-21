@@ -7,6 +7,7 @@ router.route('/')
     .post(parkCtrl.createPark)
 
 router.route('/:_id')
+    .get(parkCtrl.park_detail)
     .put(parkCtrl.park_update_put)
     .delete(parkCtrl.park_delete)
 

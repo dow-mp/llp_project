@@ -1,8 +1,10 @@
-// const express = require('express');
-// const helpCtrl = require('../controllers/searchCtrl');
-// const router = express.Router();
+const express = require('express');
+const searchCtrl = require('../controllers/searchCtrl');
+const router = express.Router();
 
-// router.route('/search')
-//     .get(helpCtrl.index)
+router.route('/')
+    .get(searchCtrl.search_form)
+    .post(searchCtrl.locate_parks)
 
-// module.exports = router;
+
+module.exports = router;

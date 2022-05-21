@@ -16,11 +16,11 @@ module.exports = {
             copyrightYear: siteData.year
         });
     },
-    search: (req, res) => {
-        res.render('pages/search', {
-            copyrightYear: siteData.year
-        });
-    },
+    // search: (req, res) => {
+    //     res.render('pages/search', {
+    //         copyrightYear: siteData.year
+    //     });
+    // },
     thanks: (req, res) => {
         res.render('pages/thanks', {
             copyrightYear: siteData.year

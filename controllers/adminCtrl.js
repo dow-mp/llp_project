@@ -24,7 +24,7 @@ module.exports = {
 
     park_update_get: (req, res) => {
         const {_id} = req.params;
-        Park.find({_id: _id}, (error, foundPark) => {
+        Park.findOne({_id: _id}, (error, foundPark) => {
             if(error) {
                 return error;
             } else {
@@ -57,7 +57,7 @@ module.exports = {
 
     volunteer_update_get: (req, res) => {
         const {_id} = req.params;
-        Volunteer.find({_id: _id}, (error, foundVolunteer) => {
+        Volunteer.findOne({_id: _id}, (error, foundVolunteer) => {
             if(error) {
                 return error;
             } else {

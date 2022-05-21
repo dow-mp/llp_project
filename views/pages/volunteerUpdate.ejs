@@ -3,40 +3,44 @@
 
     <div class="input-form-div">
         <h1 class="form-headline blurb">Update a Volunteer</h1>
-        <form class="input-form">
+        <form class="input-form" action="/volunteer/<%= foundVolunteer._id %>/?_method=PUT" method="POST">
             <fieldset>
             <label for="parkName"> Park name:
-                <input id="parkName" type="text" required>
+                <input id="parkName" name="parkName" type="text" value="<%= foundVolunteer.parkName %>" minlength="2" required />
             </label>
             <label for="parkAddress"> Park address:
-                <input id="parkAddress" type="text" required>
+                <div class="park-address">
+                    <input id="parkStreet" name="parkStreet" placeholder="Street"  type="text" class="vp-form" value="<%= foundVolunteer.parkStreet %>" minlength="2" required />
+                    <input id="parkCity" name="parkCity" placeholder="City" type="text" class="vp-form" value="<%= foundVolunteer.parkCity %>" minlength="2" required />
+                    <input id="parkState" name="parkState" placeholder="State" type="text" class="vp-form" value="<%= foundVolunteer.parkState %>" minlength="2" maxlength="2" required />
+                    <input id="parkZip" name="parkZip" placeholder="Zip" type="text" class="vp-form" value="<%= foundVolunteer.parkZip %>" minlength="5" maxlength="5" required />
+                </div>
             </label>
             <label for="volunteerDate"> When do you plan to clean up?
-                <input id="volunteerDate" type="date">
+                <input id="volunteerDate" name="volunteerDate" type="date" value="<%= foundVolunteer.volunteerDate %>"/>
             </label>
             <label for="volunteerTime"> What time do you plan to be there?
-                <input id="volunteerTime" type="time">
+                <input id="volunteerTime" name="volunteerTime" type="time" value="<%= foundVolunteer.volunteerTime %>"/>
             </label>
             <label for="userName"> Your name:
-                <input id="userName" type="text">
+                <input id="userName" name="userName" type="text" value="<%= foundVolunteer.userName %>" />
             </label>
             <label for="userEmail"> Your email:
-                <input id="userEmail" type="email">
+                <input id="userEmail" name="userEmail" type="email" value="<%= foundVolunteer.userEmail %>" />
             </label>
             </fieldset>
             <label for="moreVolunteers" class="postToSocialLabel"> Would you like us to post this information to our social media so others can join you?
-                <input id="moreVolunteers" type="checkbox">
+
+                <!-- how can i show what the user has selected when they entered the form - checked would be true, not checked would be false -->
+
+                <input id="moreVolunteers" type="checkbox" />
             </label>
             <!-- <p class="shareWarning">We will never publish your name or email on our social media without explicit<br> consent. Clicking the checkbox above does NOT assume written consent.</p> -->
-            <input type="submit" class="center-submit">
+            <input type="submit" class="center-submit" />
 
 
             <!-- </p> -->
         </form>
-
-        <div class="toSearchPage">
-            <a class="main-link inline-link" href="./search.html" referrerpolicy="noopener noreferrer" target="_blank"> SEARCH LOCAL PARKS</a>
-        </div>
     </div>
 
 <%- include('../partials/footer') -%>

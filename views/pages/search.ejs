@@ -3,6 +3,14 @@
 
     <div class="search-div">
         <h1 class="blurb">search for a local park</h1>
+
+        <form class="search-term-form" action="/search" method="POST">
+            <label for="searchTerm"> enter city, state, or zip code:
+                <input id="searchTerm" name="searchTerm" type="text" class="vp-form" minlength="2" required />
+            </label>
+            <input type="submit" class="center-submit" />
+        </form>
+
         <div class="map-box">
             <!-- Insert Map Here -->
         </div>
@@ -12,39 +20,26 @@
                 <thead class="table-headers">
                     <tr>
                         <th>Park</th>
-                        <th>Street Address</th>
+                        <th>Street</th>
                         <th>City</th>
                         <th>State</th>
-                        <th>Needs Help</th>
-                        <th>Got Some Love</th>
+                        <th>Zip Code</th>
+                        <th>Problem:</th>
                    </tr>
                 </thead>
                 <!-- as people mouse over a specific park - is it possible to highlight that pin on the map? -->
                 <tbody>
-                    <tr>
-                        <td>Sample Park</td>
-                        <td>123 Sample St</td>
-                        <td>Sample City</td>
-                        <td>Sa</td>
-                        <td><input type="checkbox"/></td>
-                        <td><input type="checkbox"/></td>
-                    </tr>
-                    <tr>
-                        <td>Sample Park</td>
-                        <td>123 Sample St</td>
-                        <td>Sample City</td>
-                        <td>Sa</td>
-                        <td><input type="checkbox"/></td>
-                        <td><input type="checkbox"/></td>
-                    </tr>
-                    <tr>
-                        <td>Sample Park</td>
-                        <td>123 Sample St</td>
-                        <td>Sample City</td>
-                        <td>Sa</td>
-                        <td><input type="checkbox"/></td>
-                        <td><input type="checkbox"/></td>
-                    </tr>
+                    <% for (park of foundsParks) { %>
+                        <tr>
+                            <td><%= park.parkName %></td>
+                            <td><%= park.parkStreet %></td>
+                            <td><%= park.parkCity %></td>
+                            <td><%= park.parkState %></td>
+                            <td><%= park.parkZip %></td>
+                            <td><input type="checkbox"/></td>
+                        </tr>
+                    <% } %>
+                    
                 <!-- data will be supplied based on map search area -->
                 </tbody>
             </table>
