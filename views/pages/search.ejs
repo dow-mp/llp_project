@@ -28,8 +28,8 @@
                        </tr>
                     </thead>
                     <tbody>
-                    <%# if (locals.searchTerm) { %>
-                       <% for (park of searchResults) { %>
+                    <% if(locals.searchTerm) { %>
+                       <% for ( let park of searchResults) { %>
                             <tr>
                                 <td><%= park.parkName %></td>
                                 <td><%= park.parkStreet %></td>
@@ -39,7 +39,7 @@
                                 <td><%= park.helpText %></td>
                             </tr>
                         <% } %>
-                    <%# } %>
+                    <% } %>
                     </tbody>
                 </table>
             <!-- </div> -->
