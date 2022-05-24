@@ -24,10 +24,10 @@ const volunteerSchema = new Schema({
         maxlength: [2, 'maximum length required is 2 characters']
     },
     parkZip: {
-        type: Number,
-        required: [true, "Please enter a street, city, and state."],
+        type: String,
+        required: [true, 'Please enter the park\'s zip code.'],
         minlength: [5, 'minimum length required is 5 characters'],
-        maxlength: [5, 'minimum length required is 5 characters']
+        maxlength: [5, 'maximum length required is 5 characters']
     },
     volunteerDate: {
         type: Date,

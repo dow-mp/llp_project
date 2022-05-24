@@ -135,7 +135,7 @@ html, body {
 
 /* blurb styling for home pg (no animation as of March 26, 2022) */
 .blurb-div {
-    background-color: var(--greengray);
+    background-color: var(--snow);
     padding: 0px;
     margin: 0px; 
 }
@@ -166,7 +166,7 @@ html, body {
 
 /* layout of the home page in vertical columns between header and footer */
 .main-body {
-    background-color: var(--greengray);
+    background-color: var(--snow);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -325,6 +325,7 @@ a {
 .search-div {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: fit-content;
     width: fit-content;
     padding: 20px;
@@ -502,6 +503,23 @@ label {
     padding: 5px 10px;
     border-radius: 5px;
 }
+
+/* styling admin review tables */
+.review-table > thead > th, .search-table > thead > th{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.75rem;
+}
+
+.review-table, .search-table {
+    margin: 100px auto;
+    border: 3px solid var(--greengray);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+}
+
+/* .table-overflow-scroll-div {
+    overflow: scroll;
+} */
 
 /* styling for the footer container */
 footer {
