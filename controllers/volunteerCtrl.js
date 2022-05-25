@@ -63,7 +63,7 @@ module.exports = {
             if(error) {
                 return error;
             } else {
-                res.redirect('/admin/volunteers');
+                res.redirect('/');
             }
         });
     },

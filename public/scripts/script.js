@@ -1,9 +1,9 @@
 // WORK IN PROGRESS
 // declare each flag box on home.html as a variable
-const flag1 = document.querySelector(".flag1"); 
-const flag2 = document.querySelector(".flag2");
-const flag3 = document.querySelector(".flag3");
-const flag4 = document.querySelector(".flag4");
+const flag1 = document.querySelector(".flag1"); console.log(flag1);
+const flag2 = document.querySelector(".flag2"); console.log(flag2);
+const flag3 = document.querySelector(".flag3"); console.log(flag3);
+const flag4 = document.querySelector(".flag4"); console.log(flag4);
 
 // create event handlers for each flag to toggle class to change border color
 const changeFlag1Color = () => {

@@ -9,42 +9,18 @@ module.exports = {
         })
     },
     locate_parks: (req, res) => {
-        const { searchTerm } = req.body;
-        if (Number(searchTerm)) {
-            Park.find({ parkZip: searchTerm}, (error, foundParks) => {
-                if(error) {
-                    return error;
-                } else {
-                    res.render('pages/search', {
-                        copyrightYear: siteData.year,
-                        searchResults: foundParks
-                    });
-                }
-            })
-        };
-        if (searchTerm.length === 2) {
-            Park.find({ parkState: searchTerm}, (error, foundParks) => {
-                if(error) {
-                    return error;
-                } else {
-                    res.render('pages/search', {
-                        copyrightYear: siteData.year,
-                        searchResults: foundParks
-                    });
-                }
-            })
-        };
-        if (searchTerm.length > 2) {
-            Park.find({ parkCity: searchTerm}, (error, foundParks) => {
-                if(error) {
-                    return error;
-                } else {
-                    res.render('pages/search', {
-                        copyrightYear: siteData.year,
-                        searchResults: foundParks
-                    });
-                }
-            })
-        }
+        const { searchTerm } = req.params;
+        console.log(searchTerm);
+        Park.find({ parkZip: searchTerm}, (error, foundParks) => {
+            if(error) {
+                return error
+            } else {
+                res.render('/search', {
+                    copyrightYear: siteData.year,
+                    foundParks: foundParks
+                });
+            }
+        })
     }
 }
+
