@@ -1,40 +1,47 @@
 <%- include('../partials/head') -%>
 <%- include('../partials/header') -%>
 
-    <div class="input-form-div">
+    <div class="update-form-div">
         <h1 class="form-headline blurb">Update a Volunteer</h1>
         <form class="input-form" action="/volunteer/<%= foundVolunteer._id %>/?_method=PUT" method="POST">
-            <fieldset>
-            <label for="parkName"> Park name:
-                <input id="parkName" name="parkName" type="text" value="<%= foundVolunteer.parkName %>" minlength="2" required />
-            </label>
-            <label for="parkAddress"> Park address:
-                <div class="park-address">
-                    <input id="parkStreet" name="parkStreet" placeholder="Street"  type="text" class="vp-form" value="<%= foundVolunteer.parkStreet %>" minlength="2" required />
-                    <input id="parkCity" name="parkCity" placeholder="City" type="text" class="vp-form" value="<%= foundVolunteer.parkCity %>" minlength="2" required />
-                    <input id="parkState" name="parkState" placeholder="State" type="text" class="vp-form" value="<%= foundVolunteer.parkState %>" minlength="2" maxlength="2" required />
-                    <input id="parkZip" name="parkZip" placeholder="Zip" type="text" class="vp-form" value="<%= foundVolunteer.parkZip %>" minlength="5" maxlength="5" required />
+            <fieldset class="form-items">
+                <div class="label-input-pair">
+                    <label for="parkName"> Park name:</label>
+                    <input id="parkName" name="parkName" type="text" value="<%= foundVolunteer.parkName %>" minlength="2" required />
                 </div>
-            </label>
-            <label for="volunteerDate"> When do you plan to clean up?
-                <input id="volunteerDate" name="volunteerDate" type="date" value="<%= foundVolunteer.volunteerDate %>"/>
-            </label>
-            <label for="volunteerTime"> What time do you plan to be there?
-                <input id="volunteerTime" name="volunteerTime" type="time" value="<%= foundVolunteer.volunteerTime %>"/>
-            </label>
-            <label for="userName"> Your name:
-                <input id="userName" name="userName" type="text" value="<%= foundVolunteer.userName %>" />
-            </label>
-            <label for="userEmail"> Your email:
-                <input id="userEmail" name="userEmail" type="email" value="<%= foundVolunteer.userEmail %>" />
-            </label>
+                <div class="label-input-pair">
+                    <label for="parkAddress"> Park address:</label>
+                    <div class="park-address">
+                        <input id="parkStreet" name="parkStreet" placeholder="Street"  type="text" class="vp-form" value="<%= foundVolunteer.parkStreet %>" minlength="2" required />
+                        <input id="parkCity" name="parkCity" placeholder="City" type="text" class="vp-form" value="<%= foundVolunteer.parkCity %>" minlength="2" required />
+                        <input id="parkState" name="parkState" placeholder="State" type="text" class="vp-form" value="<%= foundVolunteer.parkState %>" minlength="2" maxlength="2" required />
+                        <input id="parkZip" name="parkZip" placeholder="Zip" type="text" class="vp-form" value="<%= foundVolunteer.parkZip %>" minlength="5" maxlength="5" required />
+                    </div>
+                </div>
+                <div class="label-input-pair">
+                    <label for="volunteerDate"> When do you plan to clean up?</label>
+                    <input id="volunteerDate" name="volunteerDate" type="date" value="<%= foundVolunteer.volunteerDate %>"/>
+                </div>
+                <div class="label-input-pair">
+                    <label for="volunteerTime"> What time do you plan to be there?</label>
+                    <input id="volunteerTime" name="volunteerTime" type="time" value="<%= foundVolunteer.volunteerTime %>"/>
+                </div>
+                <div class="label-input-pair">
+                    <label for="userName"> Your name:</label>
+                    <input id="userName" name="userName" type="text" value="<%= foundVolunteer.userName %>" />
+                </div>
+                <div class="label-input-pair">
+                    <label for="userEmail"> Your email:</label>
+                    <input id="userEmail" name="userEmail" type="email" value="<%= foundVolunteer.userEmail %>" />
+                </div>
             </fieldset>
-            <label for="moreVolunteers" class="postToSocialLabel"> Would you like us to post this information to our social media so others can join you?
+            <div class="label-input-pair">
+                <label for="moreVolunteers" class="postToSocialLabel"> Would you like us to post this information to our social media so others can join you?</label>
 
                 <!-- how can i show what the user has selected when they entered the form - checked would be true, not checked would be false -->
 
                 <input id="moreVolunteers" type="checkbox" />
-            </label>
+            </div>
             <!-- <p class="shareWarning">We will never publish your name or email on our social media without explicit<br> consent. Clicking the checkbox above does NOT assume written consent.</p> -->
             <input type="submit" class="center-submit" />
 
