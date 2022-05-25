@@ -24,7 +24,7 @@ const volunteerSchema = new Schema({
         maxlength: [2, 'maximum length required is 2 characters']
     },
     parkZip: {
-        type: Number,
+        type: String,
         required: [true, "Please enter a street, city, and state."],
         minlength: [5, 'minimum length required is 5 characters'],
         maxlength: [5, 'minimum length required is 5 characters']

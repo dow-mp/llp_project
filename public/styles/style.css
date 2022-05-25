@@ -34,11 +34,7 @@
     
     /* header banner styling */
     .top-banner {
-    <<<<<<<< HEAD:Public/Styles/style.css
-        background-image: url(../../Public/Media/Images/Marine_Park_td_2019-05-24_063_-_Lenape_Playground.png);
-    ========
-        background-image: url(/media/images/Marine_Park_td_2019-05-24_063_-_Lenape_Playground.png);
-    >>>>>>>> ejs_pages:public/styles/style.css
+        background-image: url(../media/images/Marine_Park_td_2019-05-24_063_-_Lenape_Playground.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -586,9 +582,9 @@
     
     
     
-    /* MEDIA QUERIES - unique styling for mobile, tablet, desktop */
-    /* MOBILE */
-    @media screen and (max-width: 767px) {
+/* MEDIA QUERIES - unique styling for mobile, tablet, desktop */
+/* MOBILE */
+@media screen and (max-width: 767px) {
         .top-banner {
             width: auto;
         }
@@ -641,10 +637,10 @@
             padding: 5px 10px;
             border-radius: 5px;
             }
-        }
+}
     
-    /* TABLET */
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
         .nav-bar {
             background-color: var(--deepred);
             /* border: 1px solid var(--snow); */
@@ -709,10 +705,10 @@
             padding: 5px 10px;
             border-radius: 5px;
             } */ 
-    }
+}
     
-    /* DESKTOP */
-    @media screen and (min-width: 1024px) {
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
         #logo {
             filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
         /* the code below can be inserted into the filter property above to change the color of the svg to the deep red color included with the color scheme */
@@ -807,8 +803,7 @@
             justify-content: center;
             margin: 15px 0; 
         }
-    
-    
+      
         .flagClicked {
             border: 3px solid var(--celadon);
             color: var(--celadon);
@@ -839,7 +834,7 @@
             padding: 5px 10px;
             border-radius: 5px;
             text-transform: lowercase;
-            }
+        }
     
         .contact-info {
             display: flex;
@@ -934,4 +929,4 @@
             text-transform: uppercase;
             font-size: 1.6rem;
         }
-    }
+}

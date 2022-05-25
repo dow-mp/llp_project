@@ -24,7 +24,7 @@ const parkSchema = new Schema({
         maxlength: [2, 'maximum length accepted is 2 characters']
     },
     parkZip: {
-        type: Number,
+        type: String,
         required: [true, 'Please enter the park\'s zip code.'],
         minlength: [5, 'minimum length required is 5 characters'],
         maxlength: [5, 'maximum length required is 5 characters']

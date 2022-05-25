@@ -10,6 +10,8 @@ module.exports = {
     },
     locate_parks: (req, res) => {
         const { searchTerm } = req.body;
+        console.log(req.body);
+        console.log(searchTerm);
         if (Number(searchTerm)) {
             Park.find({ parkZip: searchTerm}, (error, foundParks) => {
                 if(error) {

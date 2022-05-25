@@ -29,7 +29,7 @@
                 </thead>
                 <!-- as people mouse over a specific park - is it possible to highlight that pin on the map? -->
                 <tbody>
-                    <% if(locals.searchTerm) { %>
+                    <%# if(locals.searchTerm) { %>
                     <% for (park of searchResults) { %>
                         <tr>
                             <td><%= park.parkName %></td>
@@ -40,7 +40,7 @@
                             <td><input type="checkbox"/></td>
                         </tr>
                     <% } %>
-                    <% } %>
+                    <%# } %>
                 <!-- data will be supplied based on map search area -->
                 </tbody>
             </table>
