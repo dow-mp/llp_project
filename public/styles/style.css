@@ -3,632 +3,187 @@
     font-family: 'Josefin Slab', serif;
     font-family: 'Poiret One', cursive; */
 
-:root {
-    --snow: #FFFCFF;
-    --deepred: #702632;
-    --mutedred: #912F40;
-    --celadon: #247BA0;
-    --greengray: #CBD4C2;
-    --black: #000000;
-    --gray: #7c7a7a;
-    --brtgreen: #00661f;
-    --littletwig: little twig, Arial, Helvetica, sans-serif;
-    --sapodilla: sapodilla, Arial, Helvetica, sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    width: 100%;
-    height:100%;
-    overflow-x: hidden;
-    margin: 0px;
-    padding: 0px;
-}
-
-/* .main-div {
-    height: 100vh;
-} */
-
-/* header banner styling */
-.top-banner {
-    background-image: url(/media/images/Marine_Park_td_2019-05-24_063_-_Lenape_Playground.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: var(--mutedred);
-    /* color: var(--deepred); */
-    height: 40vh;
-    min-height: 150px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /* margin: -10px -10px 0 -10px; */
-    /* margin: -8px; */
-}
-
-/* items within header banner */
-
-/* attempt to create more visibility of logo; don't like; would prefer to change logo color */
- .logo-div {
-    /* background-color: var(--snow); */
-    height: fit-content;
-    width: fit-content;
-    /* min-width: 200px;
-    border: 3px solid black;
-    border-radius: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center; */
-    /* box-shadow: 0px 0px 40px 20px rgb(235, 224, 177); */
-}
-
-#logo {
-    filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
-    /* the code below can be inserted into the filter property above to change the color of the svg to the deep red color included with the color scheme */
-    /* brightness(0) saturate(100%) invert(18%) sepia(15%) saturate(5421%) hue-rotate(317deg) brightness(92%) contrast(91%) */
-    /* rgb code for deepred color: 112, 38, 50 */
-    width: auto;
-    height: 40vh;
-    min-width: 175px;
-    margin: 5px 0;
-    margin-left: 5px;
-
-} 
-
-/* social media div styling */
-.social-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-end;
-    width: 100%;
-    margin-top: 15px;
-    margin-right: 5vw;
-}
-
-/* social media icon styling */
-.fab {
-    text-align: center;
-    padding: 15px;
-    background-color: var(--deepred);
-    color: var(--snow);
-    height: 50px;
-    width: 50px;
-    border: 2px solid black;
-    border-radius: 50%;
-    font-size: 20px;
-    /* margin-right: 5px; */
-    text-decoration: none;
-}
-
-/* bottom of header nav bar styling */
-.nav-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* justify-content: flex-end; */
-    background-color: var(--deepred);
-    width: 100%;
-    /* margin-right: -10px; */
-    /* margin-left: -8px; */
-}
-
-/* Hiding the nav bar links when display is under 768px */
-.nav-bar>a {
-    display: none;
-}
-
-/* Nav bar icon when display is under 768px */
-.fas, .fa-bars{
-    color: var(--snow);
-    font-size: 40px;
-    margin: 5px auto;
-    /*for now, center bars within nav div; if want to change to right align with social links in the future, change/add:
-    margin: 5px 0;
-    margin-right: 10vw;*/
-}
-
-/* blurb styling for home pg (no animation as of March 26, 2022) */
-.blurb-div {
-    background-color: var(--greengray);
-    padding: 0px;
-    margin: 0px; 
-}
-
-.blurb {
-    padding-top: 20px;
-    font-family: var(--sapodilla);
-    /* color: var(--snow); */
-    font-size: 0.8rem;
-    text-align: center;
-    width: 70vw;
-    margin: 0 auto;
-    /* border-radius: 20px; */
-    background-image: linear-gradient(
-        50deg,
-        var(--brtgreen) 0%,
-        var(--celadon) 49%,
-        var(--celadon) 50%,
-        var(--celadon) 51%,
-        var(--brtgreen) 100%
-    );
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
-    /* animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1); */
-}
-
-/* layout of the home page in vertical columns between header and footer */
-.main-body {
-    background-color: var(--greengray);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    color: var(--snow);
-    justify-content: space-evenly;
-    align-content: space-between;
-    height: 45vh;
-    padding: 20px 0;
-}
-
-/* style each div within the main body (i.e. excluding the header and footer) */
-.flag {
-    background-color: var(--deepred);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 20vh;
-    width: 40vw;
-    /* margin: 0 -8px; */
-    font-size: 0.75rem;
-    border: 3px solid var(--greengray);
-    border-radius: 20px;
-
-}
-
-/* link styling for each flag within the main body */
-a {
-    font-family:  var(--littletwig);
-    font-size: 1.5rem;
-    margin-left: 5px;
-}
-
-.main-link:link, .nav-word:link {
-    text-decoration: none;
-    color: var(--snow);
-}
-
-.main-link:visited,.nav-word:visited {
-    text-decoration: underline;
-    color: var(--snow);
-}
-
-.main-link:hover {
-    background-color: var(--celdaon);
-    text-decoration: none;
-    color: var(--snow);
-    border-radius: 3px;
-    padding: 0 5px;
-}
-
-.nav-word:hover {
-    background-color: var(--snow);
-    text-decoration: none;
-    color: var(--celadon);
-    border-radius: 3px;
-    padding: 0 5px;
-}
-
-.main-link:active, .nav-word:active {
-    text-decoration: none;
-    background-color: var(--greengray);
-    color: var(--black);
-    border-radius: 3px;
-    margin: 3px;
-    padding: 0 5px;
-}
-
-/* styling for the about page information section */
-.love-local-parks {
-    text-transform: lowercase;
-    font-family: var(--sapodilla);
-    font-size: 1.9rem;
-    color: var(--celadon);
-}
-
-.about > p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: var(--deepred);
-    font-size: 1.5rem;
-}
-
-
-.about {
-    height: fit-content;
-    width: 60vw;
-    border: 5px solid var(--greengray);
-    margin: 30px auto;
-    padding: 5px;
-    text-align: center;
-    padding-right: 70px;
-    padding-left: 70px;
-}
-
-.contact-info {
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    width: fit-content;
-    height: 5rem;
-    margin: 10px auto;
-    background-color: var(--deepred);
-    padding: 5px 10px;
-    border-radius: 15px;
-}
-
-/* styling for admin login page form */
-.login-div {
-    border: 5px solid var(--greengray);
-    padding: 15px;
-    margin: 20px auto;
-    width: 60vw;
-    height: 40vh;
-}
-
-.login-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    color: var(--deepred);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1rem;
-}
-
-.user>input, .password>input, .center-submit {
-    height: 10vh;
-    max-height: 40px;
-    min-height: 30px;
-    width: 20vw;
-    max-width: 200px;
-    min-width: 100px;
-    margin: 15px 5px;
-    border-radius: 5px;
-    border: 2px solid var(--greengray);
-    box-shadow: 2px 1px 8px var(--greengray);
-}
-
-.user, .password, .center-submit {
-    display: inline-block;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.center-submit {
-    background-color: var(--deepred);
-    color: var(--snow);
-    width: 100px;
-    border-radius: 5px;
-    margin-top: 40px;
-    border: none;
-    box-shadow: none;
-}
-
-/* styling for search page */
-.search-div {
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-    width: fit-content;
-    padding: 20px;
-    margin: 40px auto;
-    border: 5px solid var(--greengray);
-}
-
-.map-box {
-    display: flex;
-    height: 40vh;
-    width: 60vw;
-    max-height: 600px;
-    max-width: 600px;
-    /* border: 1px dashed var(--deepred); */
-    margin: 40px auto;
-}
-
-.map-table {
-    display: flex;
-    justify-content: center;
-    border-collapse: collapse;
-    /* border: 1px dashed var(--mutedred); */
-    width: fit-content;
-    height: fit-content;
-    margin: 0 auto;
-}
-
-td>input {
-    height: fit-content;
-    border: none;
-}
-
-tbody > tr:nth-child(even) {
-    background-color: var(--greengray);
-}
-
-th, td {
-    text-align: center;
-    padding: 5px 10px;
-}
-
-th {
-    font-weight: 700;
-    font-size: 1.3rem;
-    background-color: var(--deepred);
-    color: var(--snow);
-}
-
-/* styling volunteer/help page forms/inputs for MOBILE */
-.input-form-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
-
-.form-headline {
-    text-align: center;
-    font-family: var(--sapodilla);
-    margin-top: 30px;
-}
-
-.input-form {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    margin: 20px auto;
-    /* margin-top: 20px; */
-    border: 3px solid var(--greengray);
-    padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* align-content: center; */
-    align-items: right;
-}
-
-/* trying to line form inputs up to neaten them up - cannot get them to align along the right edges!!! */
-.form-items {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    /* justify-content: left; */
-    margin: 0 auto;
-    width: fit-content;
-    border: none;
-}
-
-label {
-    margin-top: 15px;
-    max-width: 150px;
-    /* margin: 0 auto; */
-    padding: 2px;
-    /* overflow-wrap: break-word; */
-}
-
-.label-input-pair > input, .label-input-pair > textarea, .vp-form {
-    /* display: block;
-    width: 25vw;
-    min-width: 150px;
-    margin: 0 auto; */
-/* trying out these settings */
-    height: 10vh;
-    max-height: 40px;
-    min-height: 30px;
-    width: 20vw;
-    max-width: 200px;
-    min-width: 100px;
-    margin-top: 2px;
-    border-radius: 5px;
-    border: 2px solid var(--greengray);
-    box-shadow: 2px 1px 8px var(--greengray);
-}
-
-.label-checkbox-pair {
-    margin-top: 10px;
-}
-
-.label-checkbox-pair > input {
-    margin-top: 2px;
-    border-radius: 5px;
-    border: 2px solid var(--greengray);
-    box-shadow: 2px 1px 8px var(--greengray);
-}
-
-#parkAddress, .label-input-pair {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: none;
-    /* margin: 0 auto; */
-    padding: 2px;
-}
-
-.park-address {
-    display: flex;
-    flex-direction: column;
-}
-
-.park-address > input {
-    height: 10vh;
-    max-height: 40px;
-    min-height: 30px;
-    width: 20vw;
-    max-width: 200px;
-    min-width: 100px;
-    margin-top: 2px;
-    border-radius: 5px;
-    border: 2px solid var(--greengray);
-    box-shadow: 2px 1px 8px var(--greengray);
-}
-
-/* .shareWarning {
-    font-size: 0.6rem;
-    overflow-wrap: break-word;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid lightgray;
-    width: fit-content;
-    margin: 10px auto;
-    padding: 3px;
-} */
-
-.toSearchPage {
-    margin: 25px auto;
-    overflow-wrap: break-word;
-    /* box-shadow: 2px 1px 8px; */
-    /* work on this box-shadow to match the shadow on inputs/submits etc */
-}
-
-.inline-link {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-transform: uppercase;
-    background-color: var(--deepred);
-    color: var(--snow);
-    font-size: 1rem;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-/* styling for the footer container */
-footer {
-    display: flex;
-    /* flex-flow: row nowrap; */
-    justify-content: space-evenly;
-}
-
-.footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    background-color: var(--deepred);
-    height: 75px;
-    width: 100%;
-    /* margin: 0 -8px; */
-    font-size: 1.75rem;
-    /* margin-top: 40px; */
-    /* padding-top: 60px; */
-}
-
-/* styling for links within the footer */
-.contact, .admin {
-    color: var(--snow);
-    font-family: var(--littletwig);
-    margin: 0 15px;
-}
-
-.copyright {
-    color: var(--snow);
-    font-family: var(--sapodilla);
-    margin: 0 15px;
-    margin-bottom: 5px;
-}
-
-
-
-
-/* MEDIA QUERIES - unique styling for mobile, tablet, desktop */
-/* MOBILE */
-@media screen and (max-width: 767px) {
+    :root {
+        --snow: #FFFCFF;
+        --deepred: #702632;
+        --mutedred: #912F40;
+        --celadon: #247BA0;
+        --greengray: #CBD4C2;
+        --black: #000000;
+        --gray: #7c7a7a;
+        --brtgreen: #00661f;
+        --littletwig: little twig, Arial, Helvetica, sans-serif;
+        --sapodilla: sapodilla, Arial, Helvetica, sans-serif;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        width: 100%;
+        height:100%;
+        overflow-x: hidden;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    /* .main-div {
+        height: 100vh;
+    } */
+    
+    /* header banner styling */
     .top-banner {
-        width: auto;
-    }
-
-    .nav-bar {
-        width: 100vw;
-        /* margin: 0 -8px; */
-        /* height: 6vh; */
-    }
-
-    .fas {
-        font-size: 1.4rem;
-    }
-
-    .love-local-parks {
-        font-size: 1rem;
-    }
-    
-    .about > p {
-        font-size: 0.75rem;
-    }
-
-    .about {
-        padding-right: 20px;
-        padding-left: 20px;
+    <<<<<<<< HEAD:Public/Styles/style.css
+        background-image: url(../../Public/Media/Images/Marine_Park_td_2019-05-24_063_-_Lenape_Playground.png);
+    ========
+        background-image: url(/media/images/Marine_Park_td_2019-05-24_063_-_Lenape_Playground.png);
+    >>>>>>>> ejs_pages:public/styles/style.css
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: var(--mutedred);
+        /* color: var(--deepred); */
+        height: 40vh;
+        min-height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* margin: -10px -10px 0 -10px; */
+        /* margin: -8px; */
     }
     
-    .center-submit {
-        margin-top: 10px;
-    }
-
-    .park-photo {
-        display: none;
+    /* items within header banner */
+    
+    /* attempt to create more visibility of logo; don't like; would prefer to change logo color */
+     .logo-div {
+        /* background-color: var(--snow); */
+        height: fit-content;
+        width: fit-content;
+        /* min-width: 200px;
+        border: 3px solid black;
+        border-radius: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center; */
+        /* box-shadow: 0px 0px 40px 20px rgb(235, 224, 177); */
     }
     
     #logo {
-        height: 100px;
+        filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
+        /* the code below can be inserted into the filter property above to change the color of the svg to the deep red color included with the color scheme */
+        /* brightness(0) saturate(100%) invert(18%) sepia(15%) saturate(5421%) hue-rotate(317deg) brightness(92%) contrast(91%) */
+        /* rgb code for deepred color: 112, 38, 50 */
         width: auto;
+        height: 40vh;
+        min-width: 175px;
+        margin: 5px 0;
+        margin-left: 5px;
+    
+    } 
+    
+    /* social media div styling */
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        width: 100%;
+        margin-top: 15px;
+        margin-right: 5vw;
     }
-
-    .footer {
-        font-size: 0.75rem;
-        width: auto;
-        height: 7vh;
-    }
-
-    .inline-link:visited {     
-        background-color: var(--greengray);
-        color: var(--deepred);
-        padding: 5px 10px;
-        border-radius: 5px;
-        }
-    }
-
-/* TABLET */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .nav-bar {
+    
+    /* social media icon styling */
+    .fab {
+        text-align: center;
+        padding: 15px;
         background-color: var(--deepred);
-        /* border: 1px solid var(--snow); */
-        /* margin-left: -8px;
-        margin-right: -8px; */
-        width:auto;
+        color: var(--snow);
+        height: 50px;
+        width: 50px;
+        border: 2px solid black;
+        border-radius: 50%;
+        font-size: 20px;
+        /* margin-right: 5px; */
+        text-decoration: none;
     }
-   
-    .nav-bar > a {
-        display: inline-block;
-        margin: 10px auto;
-        font-size: 1.25rem;
+    
+    /* bottom of header nav bar styling */
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* justify-content: flex-end; */
+        background-color: var(--deepred);
+        width: 100%;
+        /* margin-right: -10px; */
+        /* margin-left: -8px; */
     }
-
-    #mobile-nav {
+    
+    /* Hiding the nav bar links when display is under 768px */
+    .nav-bar>a {
         display: none;
     }
-
-    .blurb {
-        font-size: 1.75rem;
+    
+    /* Nav bar icon when display is under 768px */
+    .fas, .fa-bars{
+        color: var(--snow);
+        font-size: 40px;
+        margin: 5px auto;
+        /*for now, center bars within nav div; if want to change to right align with social links in the future, change/add:
+        margin: 5px 0;
+        margin-right: 10vw;*/
     }
-
+    
+    /* blurb styling for home pg (no animation as of March 26, 2022) */
+    .blurb-div {
+        background-color: var(--snow);
+        padding: 0px;
+        margin: 0px; 
+    }
+    
+    .blurb {
+        padding-top: 20px;
+        font-family: var(--sapodilla);
+        /* color: var(--snow); */
+        font-size: 1.75rem;
+        text-align: center;
+        width: 70vw;
+        margin: 0 auto;
+        /* border-radius: 20px; */
+        background-image: linear-gradient(
+            50deg,
+            var(--brtgreen) 0%,
+            var(--celadon) 49%,
+            var(--celadon) 50%,
+            var(--celadon) 51%,
+            var(--brtgreen) 100%
+        );
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        /* animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1); */
+    }
+    
+    /* layout of the home page in vertical columns between header and footer */
     .main-body {
+        background-color: var(--snow);
         display: flex;
         flex-flow: row wrap;
+        justify-content: center;
+        color: var(--snow);
         justify-content: space-evenly;
         align-content: space-between;
+        height: 45vh;
+        padding: 20px 0;
     }
-
-    /* .flag {
+    
+    /* style each div within the main body (i.e. excluding the header and footer) */
+    .flag {
+        background-color: var(--deepred);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -636,165 +191,80 @@ footer {
         height: 20vh;
         width: 40vw;
         /* margin: 0 -8px; */
-        /* font-size: 0.75rem; */
-        /* border: 3px solid var(--greengray); */
-        /* border-radius: 20px; */
-    /* } */
-
-    .flag {
-        display: flex;
-        justify-content: center;
-        width: 40vw;
-        height: 20vh;
-        background-color: var(--deepred);
-        border-radius: 20px;
+        font-size: 0.75rem;
         border: 3px solid var(--greengray);
-        /* margin: 10px 5px; */
-
+        border-radius: 20px;
+    
     }
-
-    .park-photo {
-        display: none;
-    }
-
-    .inline-link:visited {     
-        background-color: var(--greengray);
-        color: var(--deepred);
-        padding: 5px 10px;
-        border-radius: 5px;
-        } */ 
-}
-
-/* DESKTOP */
-@media screen and (min-width: 1024px) {
-    #logo {
-        filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
-    /* the code below can be inserted into the filter property above to change the color of the svg to the deep red color included with the color scheme */
-    /* brightness(0) saturate(100%) invert(18%) sepia(15%) saturate(5421%) hue-rotate(317deg) brightness(92%) contrast(91%) */
-    /* rgb code for deepred color: 112, 38, 50 */
-        width: auto;
-        height: 40VH;
-        min-width: 150px;
-        margin: 5px 0;
+    
+    /* link styling for each flag within the main body */
+    a {
+        font-family:  var(--littletwig);
+        font-size: 1.5rem;
         margin-left: 5px;
-    } 
-
-    #mobile-nav {
-        display: none;
-    }
-
-    .nav-bar {
-        display: flex;
-        flex-direction: row nowrap;
-        justify-content: space-evenly;
-        background-color: var(--deepred);
-        width: 100%;
-        /* margin-right: -10px; */
-        /* margin-left: -8px; */
-    }
-
-    .nav-bar>a {
-        display: flex;
-        flex-direction: row nowrap;
-    }
-
-    .social-links {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-content: center;
     }
     
-    /* social media link styling for all states */
-    .social-links>a:link {
+    .main-link:link, .nav-word:link {
+        text-decoration: none;
         color: var(--snow);
-        text-decoration: none;
-        font-weight: 700;
     }
     
-    .social-links>a:visited {
+    .main-link:visited,.nav-word:visited {
+        text-decoration: underline;
         color: var(--snow);
-        text-decoration: none;
-        font-weight: 700;
     }
     
-    .social-links>a:hover {
-        background-color: var(--snow);
-        color: var(--celadon);
-        text-decoration: none;
-        font-weight: 700;
-    }
-    
-    .social-links>a:active {
-        background-color: var(--snow);
-        color: var(--greengray);
-        text-decoration: none;
-        font-weight: 700;
-    }   
-
-    .main-body, .blurb-div {
-        background-color: var(--snow);
-    }
-
-    .blurb {
-        font-size: 2rem;
-        margin: 0 auto;
-        border-radius: 20px;
-    }
-
-    .main-body {
-        width: 100%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-    }
-
-    .flag {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--snow);
-        border: 3px solid var(--greengray);
-        border-radius: 15px;
-        /* color: var(--black); */
-        width: 20vw;
-        height: 30vh;
-        justify-content: center;
-        margin: 15px 0; 
-    }
-
-
-    .flagClicked {
-        border: 3px solid var(--celadon);
-        color: var(--celadon);
-    }
-
-    .main-link:link {
-        color: var(--deepred);
-    }
-    .main-link:visited {
-        color: var(--deepred);
-    }
     .main-link:hover {
-        color: var(--deepred);
-        background-color: var(--snow);
-        color: var(--celadon);
+        background-color: var(--celdaon);
         text-decoration: none;
+        color: var(--snow);
+        border-radius: 3px;
+        padding: 0 5px;
     }
     
-    .main-link:active {
-        background-color: var(--greengray);
-        color: var(--celadon);
+    .nav-word:hover {
+        background-color: var(--snow);
         text-decoration: none;
+        color: var(--celadon);
+        border-radius: 3px;
+        padding: 0 5px;
     }
-
-    .inline-link:visited {     
+    
+    .main-link:active, .nav-word:active {
+        text-decoration: none;
         background-color: var(--greengray);
-        color: var(--deepred);
-        padding: 5px 10px;
-        border-radius: 5px;
+        color: var(--black);
+        border-radius: 3px;
+        margin: 3px;
+        padding: 0 5px;
+    }
+    
+    /* styling for the about page information section */
+    .love-local-parks {
         text-transform: lowercase;
-        }
-
+        font-family: var(--sapodilla);
+        font-size: 1.9rem;
+        color: var(--celadon);
+    }
+    
+    .about > p {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: var(--deepred);
+        font-size: 1.5rem;
+    }
+    
+    
+    .about {
+        height: fit-content;
+        width: 60vw;
+        border: 5px solid var(--greengray);
+        margin: 30px auto;
+        padding: 5px;
+        text-align: center;
+        padding-right: 70px;
+        padding-left: 70px;
+    }
+    
     .contact-info {
         display: flex;
         justify-items: center;
@@ -802,72 +272,214 @@ footer {
         width: fit-content;
         height: 5rem;
         margin: 10px auto;
-        background-color:#ffffff;
+        background-color: var(--deepred);
+        padding: 5px 10px;
+        border-radius: 15px;
+    }
+    
+    /* styling for admin login page form */
+    .login-div {
+        border: 5px solid var(--greengray);
+        padding: 15px;
+        margin: 20px auto;
+        width: 60vw;
+        height: 40vh;
+    }
+    
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
         color: var(--deepred);
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+    }
+    
+    .user>input, .password>input, .center-submit {
+        height: 10vh;
+        max-height: 40px;
+        min-height: 30px;
+        width: 20vw;
+        max-width: 200px;
+        min-width: 100px;
+        margin: 15px 5px;
+        border-radius: 5px;
+        border: 2px solid var(--greengray);
+        box-shadow: 2px 1px 8px var(--greengray);
+    }
+    
+    .user, .password, .center-submit {
+        display: inline-block;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .center-submit {
+        background-color: var(--deepred);
+        color: var(--snow);
+        width: 100px;
+        border-radius: 5px;
+        margin-top: 40px;
+        border: none;
+        box-shadow: none;
+    }
+    
+    /* styling for search page */
+    .search-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+        width: fit-content;
+        padding: 20px;
+        margin: 40px auto;
+        border: 5px solid var(--greengray);
+    }
+    
+    .map-box {
+        display: flex;
+        height: 40vh;
+        width: 60vw;
+        max-height: 600px;
+        max-width: 600px;
+        /* border: 1px dashed var(--deepred); */
+        margin: 40px auto;
+    }
+    
+    .map-table {
+        display: flex;
+        justify-content: center;
+        border-collapse: collapse;
+        /* border: 1px dashed var(--mutedred); */
+        width: fit-content;
+        height: fit-content;
+        margin: 0 auto;
+    }
+    
+    td>input {
+        height: fit-content;
+        border: none;
+    }
+    
+    tbody > tr:nth-child(even) {
+        background-color: var(--greengray);
+    }
+    
+    th, td {
+        text-align: center;
         padding: 5px 10px;
     }
-
-    /* styling volunteer/help page forms/inputs */
+    
+    th {
+        font-weight: 700;
+        font-size: 1.3rem;
+        background-color: var(--deepred);
+        color: var(--snow);
+    }
+    
+    /* styling volunteer/help page forms/inputs for MOBILE */
     .input-form-div {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
     }
-
+    
     .form-headline {
         text-align: center;
         font-family: var(--sapodilla);
         margin-top: 30px;
     }
-
+    
     .input-form {
         display: flex;
         flex-direction: column;
+        width: fit-content;
         margin: 20px auto;
+        /* margin-top: 20px; */
         border: 3px solid var(--greengray);
-        min-width: 70vw;
         padding: 20px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* align-content: center; */
+        align-items: right;
     }
-
-    .input-form > fieldset {
+    
+    /* trying to line form inputs up to neaten them up - cannot get them to align along the right edges!!! */
+    .form-items {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        /* justify-content: left; */
+        margin: 0 auto;
+        width: fit-content;
         border: none;
-
     }
-
-    /* styling for help page text area input ONLY */
-    .formText *{
-        vertical-align: middle;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    /* .input-form > fieldset > label {
-        display: inline-block;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    } */
-
-    .postToSocialLabel {
-        text-align: center;
-    }
-
+    
     label {
-        margin-top: 10px;
-        max-width: none;
-        overflow-wrap: normal;
+        margin-top: 15px;
+        max-width: 150px;
+        /* margin: 0 auto; */
+        padding: 2px;
+        /* overflow-wrap: break-word; */
     }
-
-    .input-form > fieldset > label > input, .input-form > fieldset > div > label > textarea {
-        display: inline-block;
+    
+    .label-input-pair > input, .label-input-pair > textarea, .vp-form {
+        /* display: block;
         width: 25vw;
         min-width: 150px;
-        margin: 10px 0;
-
+        margin: 0 auto; */
+    /* trying out these settings */
+        height: 10vh;
+        max-height: 40px;
+        min-height: 30px;
+        width: 20vw;
+        max-width: 200px;
+        min-width: 100px;
+        margin-top: 2px;
+        border-radius: 5px;
+        border: 2px solid var(--greengray);
+        box-shadow: 2px 1px 8px var(--greengray);
     }
-
+    
+    .label-checkbox-pair {
+        margin-top: 10px;
+    }
+    
+    .label-checkbox-pair > input {
+        margin-top: 2px;
+        border-radius: 5px;
+        border: 2px solid var(--greengray);
+        box-shadow: 2px 1px 8px var(--greengray);
+    }
+    
+    #parkAddress, .label-input-pair {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: none;
+        /* margin: 0 auto; */
+        padding: 2px;
+    }
+    
+    .park-address {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .park-address > input {
+        height: 10vh;
+        max-height: 40px;
+        min-height: 30px;
+        width: 20vw;
+        max-width: 200px;
+        min-width: 100px;
+        margin-top: 2px;
+        border-radius: 5px;
+        border: 2px solid var(--greengray);
+        box-shadow: 2px 1px 8px var(--greengray);
+    }
+    
     /* .shareWarning {
         font-size: 0.6rem;
         overflow-wrap: break-word;
@@ -878,14 +490,448 @@ footer {
         margin: 10px auto;
         padding: 3px;
     } */
-
-    .toSearchPageP {
-        margin: 0 auto;
-        margin-top: 25px;
-    }
-
+    
     .toSearchPage {
-        text-transform: uppercase;
-        font-size: 1.6rem;
+        margin: 25px auto;
+        overflow-wrap: break-word;
+        /* box-shadow: 2px 1px 8px; */
+        /* work on this box-shadow to match the shadow on inputs/submits etc */
     }
-}
+    
+    .inline-link {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: uppercase;
+        background-color: var(--deepred);
+        color: var(--snow);
+        font-size: 1rem;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    
+    /* styling admin review tables */
+    .review-table > thead > th, .search-table > thead > th{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.75rem;
+    }
+    
+    .review-table, .search-table {
+        margin: 100px auto;
+        border: 3px solid var(--greengray);
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+    }
+    
+    /* .table-overflow-scroll-div {
+        overflow: scroll;
+    } */
+    
+    /* styling for the footer container */
+    footer {
+        display: flex;
+        /* flex-flow: row nowrap; */
+        justify-content: space-evenly;
+    }
+    
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        background-color: var(--deepred);
+        height: 100px;
+        width: 100%;
+        /* margin: 0 -8px; */
+        font-size: 1.75rem;
+        /* margin-top: 40px; */
+        /* padding-top: 60px; */
+    }
+    
+    .footer-legal {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        padding: 5px;
+    }
+    
+    /* styling for links within the footer */
+    .contact, .admin {
+        color: var(--snow);
+        font-family: var(--littletwig);
+        margin: 0 15px;
+    }
+    
+    .copyright {
+        color: var(--snow);
+        font-family: var(--sapodilla);
+        margin: 5px 15px;
+        margin-bottom: 5px;
+    }
+    
+    .photo-cred {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 5px auto;
+        margin-bottom: 1px;
+        color: var(--snow);
+        font-size: 0.5rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0 auto;
+    }
+    
+    .photo-att-link:link, .photo-att-link:visited, .photo-att-link:hover, .photo-att-link:active {
+        text-decoration: underline;
+        color: var(--snow);
+        font-size: 0.5rem;
+    }
+    
+    
+    
+    /* MEDIA QUERIES - unique styling for mobile, tablet, desktop */
+    /* MOBILE */
+    @media screen and (max-width: 767px) {
+        .top-banner {
+            width: auto;
+        }
+    
+        .nav-bar {
+            width: 100vw;
+            /* margin: 0 -8px; */
+            /* height: 6vh; */
+        }
+    
+        .fas {
+            font-size: 1.4rem;
+        }
+    
+        .love-local-parks {
+            font-size: 1rem;
+        }
+        
+        .about > p {
+            font-size: 0.75rem;
+        }
+    
+        .about {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        
+        .center-submit {
+            margin-top: 10px;
+        }
+    
+        .park-photo {
+            display: none;
+        }
+        
+        #logo {
+            height: 100px;
+            width: auto;
+        }
+    
+        .footer {
+            font-size: 0.75rem;
+            width: auto;
+            height: 7vh;
+        }
+    
+        .inline-link:visited {     
+            background-color: var(--greengray);
+            color: var(--deepred);
+            padding: 5px 10px;
+            border-radius: 5px;
+            }
+        }
+    
+    /* TABLET */
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .nav-bar {
+            background-color: var(--deepred);
+            /* border: 1px solid var(--snow); */
+            /* margin-left: -8px;
+            margin-right: -8px; */
+            width:auto;
+        }
+       
+        .nav-bar > a {
+            display: inline-block;
+            margin: 10px auto;
+            font-size: 1.25rem;
+        }
+    
+        #mobile-nav {
+            display: none;
+        }
+    
+        .blurb {
+            font-size: 2.5rem;
+        }
+    
+        .main-body {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-content: space-between;
+        }
+    
+        /* .flag {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 20vh;
+            width: 40vw;
+            /* margin: 0 -8px; */
+            /* font-size: 0.75rem; */
+            /* border: 3px solid var(--greengray); */
+            /* border-radius: 20px; */
+        /* } */
+    
+        .flag {
+            display: flex;
+            justify-content: center;
+            width: 40vw;
+            height: 20vh;
+            background-color: var(--deepred);
+            border-radius: 20px;
+            border: 3px solid var(--greengray);
+            /* margin: 10px 5px; */
+    
+        }
+    
+        .park-photo {
+            display: none;
+        }
+    
+        .inline-link:visited {     
+            background-color: var(--greengray);
+            color: var(--deepred);
+            padding: 5px 10px;
+            border-radius: 5px;
+            } */ 
+    }
+    
+    /* DESKTOP */
+    @media screen and (min-width: 1024px) {
+        #logo {
+            filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
+        /* the code below can be inserted into the filter property above to change the color of the svg to the deep red color included with the color scheme */
+        /* brightness(0) saturate(100%) invert(18%) sepia(15%) saturate(5421%) hue-rotate(317deg) brightness(92%) contrast(91%) */
+        /* rgb code for deepred color: 112, 38, 50 */
+            width: auto;
+            height: 40VH;
+            min-width: 150px;
+            margin: 5px 0;
+            margin-left: 5px;
+        } 
+    
+        #mobile-nav {
+            display: none;
+        }
+    
+        .nav-bar {
+            display: flex;
+            flex-direction: row nowrap;
+            justify-content: space-evenly;
+            background-color: var(--deepred);
+            width: 100%;
+            /* margin-right: -10px; */
+            /* margin-left: -8px; */
+        }
+    
+        .nav-bar>a {
+            display: flex;
+            flex-direction: row nowrap;
+        }
+    
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-content: center;
+        }
+        
+        /* social media link styling for all states */
+        .social-links>a:link {
+            color: var(--snow);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        .social-links>a:visited {
+            color: var(--snow);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        .social-links>a:hover {
+            background-color: var(--snow);
+            color: var(--celadon);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        .social-links>a:active {
+            background-color: var(--snow);
+            color: var(--greengray);
+            text-decoration: none;
+            font-weight: 700;
+        }   
+    
+        .main-body, .blurb-div {
+            background-color: var(--snow);
+        }
+    
+        .blurb {
+            font-size: 2rem;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+    
+        .main-body {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+    
+        .flag {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--snow);
+            border: 3px solid var(--greengray);
+            border-radius: 15px;
+            /* color: var(--black); */
+            width: 20vw;
+            height: 30vh;
+            justify-content: center;
+            margin: 15px 0; 
+        }
+    
+    
+        .flagClicked {
+            border: 3px solid var(--celadon);
+            color: var(--celadon);
+        }
+    
+        .main-link:link {
+            color: var(--deepred);
+        }
+        .main-link:visited {
+            color: var(--deepred);
+        }
+        .main-link:hover {
+            color: var(--deepred);
+            background-color: var(--snow);
+            color: var(--celadon);
+            text-decoration: none;
+        }
+        
+        .main-link:active {
+            background-color: var(--greengray);
+            color: var(--celadon);
+            text-decoration: none;
+        }
+    
+        .inline-link:visited {     
+            background-color: var(--greengray);
+            color: var(--deepred);
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-transform: lowercase;
+            }
+    
+        .contact-info {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            width: fit-content;
+            height: 5rem;
+            margin: 10px auto;
+            background-color:#ffffff;
+            color: var(--deepred);
+            padding: 5px 10px;
+        }
+    
+        /* styling volunteer/help page forms/inputs */
+        .input-form-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+    
+        .form-headline {
+            text-align: center;
+            font-family: var(--sapodilla);
+            margin-top: 30px;
+        }
+    
+        .input-form {
+            display: flex;
+            flex-direction: column;
+            margin: 20px auto;
+            border: 3px solid var(--greengray);
+            min-width: 70vw;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    
+        .input-form > fieldset {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            border: none;
+    
+        }
+    
+        /* styling for help page text area input ONLY */
+        .formText *{
+            vertical-align: middle;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    
+        /* .input-form > fieldset > label {
+            display: inline-block;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        } */
+    
+        .postToSocialLabel {
+            text-align: center;
+        }
+    
+        label {
+            margin-top: 10px;
+            max-width: none;
+            overflow-wrap: normal;
+        }
+    
+        .input-form > fieldset > label > input, .input-form > fieldset > div > label > textarea {
+            display: inline-block;
+            width: 25vw;
+            min-width: 150px;
+            margin: 10px 0;
+    
+        }
+    
+        /* .shareWarning {
+            font-size: 0.6rem;
+            overflow-wrap: break-word;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid lightgray;
+            width: fit-content;
+            margin: 10px auto;
+            padding: 3px;
+        } */
+    
+        .toSearchPageP {
+            margin: 0 auto;
+            margin-top: 25px;
+        }
+    
+        .toSearchPage {
+            text-transform: uppercase;
+            font-size: 1.6rem;
+        }
+    }
