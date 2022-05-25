@@ -1,0 +1,24 @@
+require('dotenv').config();
+const express = require('express');
+const morgan = require('morgan');
+const methodOverride = require('method-override');
+const path = require('path');
+const app = express();
+const routes = require('./routes/indexRoutes')
+const PORT = 5000;
+
+app.set('view engine', 'ejs');
+
+app.use(express.static( path.join(__dirname, 'public') ));
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
+app.use(methodOverride('_method'));
+app.use(morgan('dev'));
+app.use(routes);
+
+require('./config/connection');
+
+app.listen(PORT, () => {
+    console.log(`The server is listening at port ${PORT}.`)
+});
+

@@ -1,0 +1,40 @@
+<%- include('../partials/head') -%>
+<%- include('../partials/header') -%>
+
+    <table class="review-table">
+        <thead class="table-headers">
+            <tr>
+                <th>Park name</th>
+                <th>Park street</th>
+                <th>Park city</th>
+                <th>Park state</th>
+                <th>Park zip code</th>
+                <th>Comments</th>
+                <th>Reporter name</th>
+                <th>Reporter email</th>
+                <th colspan="2">Admin Actions</th>
+           </tr>
+        </thead>
+        <tbody>
+            <% for (park of allParks) { %>
+                <tr>
+                    <td><%= park.parkName %></td>
+                    <td><%= park.parkStreet %></td>
+                    <td><%= park.parkCity %></td>
+                    <td><%= park.parkState %></td>
+                    <td><%= park.parkZip %></td>
+                    <td><%= park.helpText %></td>
+                    <td><%= park.userName %></td>
+                    <td><%= park.userEmail %></td>
+                    <td><a href="./<%= park._id %>/edit-park" class="admin-review-button">edit</a></td>
+                    <td>
+                        <form action="/park/<%= park._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="delete-button-container">
+                            <button class="admin-review-button" type="submit">delete</button> 
+                        </form>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+<%- include('../partials/footer') -%>

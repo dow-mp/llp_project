@@ -1,0 +1,44 @@
+<%- include('../partials/head') -%>
+<%- include('../partials/header') -%>
+
+    <table class="review-table">
+        <thead class="table-headers">
+            <tr>
+                <th>Park name</th>
+                <th>Park street</th>
+                <th>Park city</th>
+                <th>Park state</th>
+                <th>Park zip</th>
+                <th>Planned date</th>
+                <th>Planned time</th>
+                <th>Reporter name</th>
+                <th>Reporter email</th>
+                <th>Post on social?</th>
+                <th colspan="2">Admin Actions</th>
+           </tr>
+        </thead>
+        <tbody>
+            <% for (volunteer of allVolunteers) { %>
+                <tr>
+                    <td><%= volunteer.parkName %></td>
+                    <td><%= volunteer.parkStreet %></td>
+                    <td><%= volunteer.parkCity %></td>
+                    <td><%= volunteer.parkState %></td>
+                    <td><%= volunteer.parkZip %></td>
+                    <td><%= volunteer.volunteerDate %></td>
+                    <td><%= volunteer.volunteerTime %></td>
+                    <td><%= volunteer.userName %></td>
+                    <td><%= volunteer.userEmail %></td>
+                    <td><%= volunteer.moreVolunteers %></td>
+                    <td><a href="./<%= volunteer._id %>/edit-volunteer" class="admin-review-button">edit</a></td>
+                    <td>
+                        <form action="/volunteer/<%= volunteer._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="delete-button-container">
+                            <button class="admin-review-button" type="submit">delete</button> 
+                        </form>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+<%- include('../partials/footer') -%>

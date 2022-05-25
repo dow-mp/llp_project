@@ -1,0 +1,38 @@
+<%- include('../partials/head') -%>
+<%- include('../partials/header') -%>
+
+    <div class="update-form-div">
+        <h1 class="form-headline blurb">Update a Park</h1>
+        <form class="input-form" action="/park/<%= foundPark._id %>/?_method=PUT" method="POST">
+            <fieldset class="form-items">
+                <div class="label-input-pair">
+                    <label for="parkName"> Park name:</label>
+                    <input id="parkName" name="parkName" class="vp-form" type="text" value="<%= foundPark.parkName %>" minlength="2" required />
+                </div>
+                <div class="label-input-pair">
+                    <label for="parkAddress"> Park address:</label>
+                    <div class="park-address">
+                        <input id="parkStreet" name="parkStreet" placeholder="Street"  type="text" class="vp-form" value="<%= foundPark.parkStreet %>" minlength="2" required />
+                        <input id="parkCity" name="parkCity" placeholder="City" type="text" class="vp-form" value="<%= foundPark.parkCity %>" minlength="2" required />
+                        <input id="parkState" name="parkState" placeholder="State" type="text" class="vp-form" value="<%= foundPark.parkState %>" minlength="2" maxlength="2" required />
+                        <input id="parkZip" name="parkZip" placeholder="Zip" type="text" class="vp-form" value="<%= foundPark.parkZip %>" minlength="5" maxlength="5" required />
+                    </div>
+                </div>
+                <div class="label-input-pair">
+                    <label for="helpText"> What's wrong? </label>
+                    <textarea id="helpText" value="<%= foundPark.helpText %>" rows="3"><%= foundPark.helpText %></textarea>
+                </div>
+                <div class="label-input-pair">
+                    <label for="userName"> Your name:</label>
+                    <input id="userName" name="userName" class="vp-form" type="text" value="<%= foundPark.userName %>" />
+                </div>
+                <div class="label-input-pair">
+                    <label for="userEmail"> Your email:</label>
+                    <input id="userEmail" name="userEmail" class="vp-form" type="email" value="<%= foundPark.userEmail %>" />
+                </div>
+            </fieldset>
+            <input type="submit" class="center-submit">
+        </form>
+        </div>
+
+<%- include('../partials/footer') -%>

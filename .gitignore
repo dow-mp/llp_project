@@ -1,13 +1,4 @@
-FreyPl.jpg
-KileyPl.jpg
-/Media/Planning
-LLPlogo-iterations.afdesign
-HenryAvePl.jpg
-curious.svg
-help.svg
-successes.svg
-test2.afdesign
-volunteer.svg
-LLPlogov1.png
-node_modules
-Planning
+/Planning
+node_modules/
+.env
+
