@@ -48,8 +48,6 @@ const toggleBurger = (e) => {
     navBar.classList.toggle("show-links");
     navWordLinks.forEach((element) => {element.classList.toggle("hide-links")});
     navWordLinks.forEach((element) => {element.classList.toggle("show-links")});
-    navWordLinks.forEach((element) => {
-    });  
 };
 
 hamburger.addEventListener("click", toggleBurger);
