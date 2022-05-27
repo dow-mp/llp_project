@@ -4,11 +4,11 @@
     <div class="search-div">
         <h1 class="blurb">search for a local park</h1>
 
-        <form class="search-term-form" action="/search" method="POST">
+        <form id="searchForm" class="search-term-form" action="/search" method="POST">
             <label for="searchTerm"> enter city, state, or zip code:
                 <input id="searchTerm" name="searchTerm" type="text" class="vp-form" minlength="2" required />
             </label>
-            <input type="submit" class="center-submit" />
+            <input id="searchTermSubmit" type="submit" class="center-submit" />
         </form>
 
         <div class="map-box">
@@ -29,7 +29,7 @@
                 </thead>
                 <!-- as people mouse over a specific park - is it possible to highlight that pin on the map? -->
                 <tbody>
-                    <%# if(locals.searchTerm) { %>
+                    <% if(locals.searchTerm) %>
                     <% for (park of searchResults) { %>
                         <tr>
                             <td><%= park.parkName %></td>
@@ -37,10 +37,10 @@
                             <td><%= park.parkCity %></td>
                             <td><%= park.parkState %></td>
                             <td><%= park.parkZip %></td>
-                            <td><input type="checkbox"/></td>
+                            <td><%= park.helpText %></td>
                         </tr>
                     <% } %>
-                    <%# } %>
+                    <% } %>
                 <!-- data will be supplied based on map search area -->
                 </tbody>
             </table>

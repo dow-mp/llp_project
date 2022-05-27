@@ -1,9 +1,9 @@
-// WORK IN PROGRESS
+// HOME PAGE - STYLING FOR FLAGS TO CHANGE COLOR WITH MOUSEOVER
 // declare each flag box on home.html as a variable
-const flag1 = document.querySelector(".flag1"); console.log(flag1);
-const flag2 = document.querySelector(".flag2"); console.log(flag2);
-const flag3 = document.querySelector(".flag3"); console.log(flag3);
-const flag4 = document.querySelector(".flag4"); console.log(flag4);
+const flag1 = document.querySelector(".flag1");
+const flag2 = document.querySelector(".flag2");
+const flag3 = document.querySelector(".flag3");
+const flag4 = document.querySelector(".flag4");
 
 // create event handlers for each flag to toggle class to change border color
 const changeFlag1Color = () => {
@@ -36,9 +36,20 @@ flag4.addEventListener("mouseenter", changeFlag4Color);
 flag4.addEventListener("mouseleave", changeFlag4Color);
 
 
-// separate park address input into separate fields (i.e. street number, street, street listing type, city, state, country) ????
-// const parkAddress = document.querySelector("#parkAddress").value
-// console.log(parkAddress);
-// const parkArray = parkAddress.split(" ");
-// console.log(parkArray);
+// MOBILE - HAMBURGER ICON FUNCTIONALITY
+// store icon as variable
+const hamburger = document.querySelector("#mobile-nav");
+// store desktop/tablet nav links in a variable (will need to loop through using forEach)
+const navWordLinks = document.querySelectorAll(".nav-word");
+// store nav container as variable to apply centered column styling for drop down menu
+const navBar = document.querySelector(".nav-bar");
 
+const toggleBurger = (e) => {
+    navBar.classList.toggle("show-links");
+    navWordLinks.forEach((element) => {element.classList.toggle("hide-links")});
+    navWordLinks.forEach((element) => {element.classList.toggle("show-links")});
+    navWordLinks.forEach((element) => {
+    });  
+};
+
+hamburger.addEventListener("click", toggleBurger);
