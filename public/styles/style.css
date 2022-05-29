@@ -199,24 +199,24 @@ a {
     margin-left: 5px;
 }
 
-.main-link:link, .nav-word:link {
+.nav-word:link {
     text-decoration: none;
     color: var(--snow);
 }
 
-.main-link:visited,.nav-word:visited {
+.nav-word:visited {
     text-decoration: underline;
     color: var(--snow);
 }
 
-.main-link:hover, .nav-word:hover {
+.nav-word:hover {
     background-color: var(--celdaon);
     text-decoration: none;
     color: var(--snow);
     border-radius: 3px;
 }
 
-.main-link:active, .nav-word:active {
+.nav-word:active {
     text-decoration: none;
     background-color: var(--greengray);
     color: var(--black);
@@ -268,6 +268,41 @@ a {
     background-color: var(--deepred);
     padding: 5px 10px;
     border-radius: 15px;
+}
+
+/* styles contact and search links on about and volunteer pages */
+.link-button > h2 {
+    margin: 15px;
+    text-decoration: none;
+}
+
+.link-button:link {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 25px;
+    background-color: var(--deepred);
+    color: var(--snow);
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.link-button:visited {
+    background-color: var(--deepred);
+    color: var(--snow);
+    text-decoration: none;
+}
+
+.link-button:hover {
+    background-color: var(--snow);
+    color: var(--celadon);
+    border: 3px solid var(--celadon);
+}
+
+.link-button:active {
+    background-color: var(--snow);
+    color: var(--celadon);
+    border: 3px solid var(--celadon);
 }
 
 /* styling for admin login page form */
@@ -776,13 +811,69 @@ footer {
         justify-content: center;
         margin: 15px 0; 
     }
-    
-    .flagClicked {
+
+    .index-link:link {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--snow);
+        border: 3px solid var(--greengray);
+        border-radius: 15px;
+        color: var(--deepred);
+        width: 20vw;
+        height: 30vh;
+        justify-content: center;
+        margin: 15px 0; 
+        text-decoration: none;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .index-link:visited {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--snow);
+        border: 3px solid var(--greengray);
+        border-radius: 15px;
+        color: var(--deepred);
+        width: 20vw;
+        height: 30vh;
+        justify-content: center;
+        margin: 15px 0; 
+        text-decoration: none;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .index-link:hover {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--snow);
         border: 3px solid var(--celadon);
+        border-radius: 15px;
         color: var(--celadon);
+        width: 20vw;
+        height: 30vh;
+        justify-content: center;
+        margin: 15px 0; 
+        text-decoration: none;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .index-link:active {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--snow);
+        border: 3px solid var(--celadon);
+        border-radius: 15px;
+        color: var(--celadon);
+        width: 20vw;
+        height: 30vh;
+        justify-content: center;
+        margin: 15px 0; 
+        text-decoration: none;
+        text-align: center;
+        font-size: 2rem;
     }
 
-    .main-link:link {
+    /* .main-link:link {
         color: var(--deepred);
     }
     .main-link:visited {
@@ -799,7 +890,7 @@ footer {
         background-color: var(--greengray);
         color: var(--celadon);
         text-decoration: none;
-    }
+    } */
 
     .inline-link:visited {     
         background-color: var(--greengray);
