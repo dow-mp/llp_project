@@ -10,7 +10,6 @@ module.exports = {
     },
     locate_parks: (req, res) => {
         console.log(req.body);
-        
         if(!req.body) {
             res.render('pages/search', {
                 copyrightYear: siteData.year
@@ -19,42 +18,21 @@ module.exports = {
         const { searchTerm } = req.body;
         console.log(req.body);
         console.log(searchTerm);
-        // if (Number(searchTerm) && searchTerm.length === 5) {
-            Park.find({ parkZip: searchTerm}, (error, foundParks) => {
+        // if (Number(searchTerm)) {
+            Park.find({$or: [ 
+                {parkZip: searchTerm}, 
+                {parkState: { '$regex': searchTerm, '$options': 'i' }}, 
+                {parkCity: { '$regex': searchTerm, '$options': 'i' }}
+            ]},  (error, foundParks) => {
                 if(error) {
                     return error;
                 } else {
-                    res.render('pages/search', {
+                    res.render('pages/searchResults', {
                         copyrightYear: siteData.year,
                         searchResults: foundParks
                     });
                 }
             })
-        // };
-        // if (searchTerm.length === 2) {
-        //     Park.find({ parkState: searchTerm}, (error, foundParks) => {
-        //         if(error) {
-        //             return error;
-        //         } else {
-        //             res.render('pages/search', {
-        //                 copyrightYear: siteData.year,
-        //                 searchResults: foundParks
-        //             });
-        //         }
-        //     })
-        // };
-        // if (searchTerm.length > 2) {
-        //     Park.find({ parkCity: searchTerm}, (error, foundParks) => {
-        //         if(error) {
-        //             return error;
-        //         } else {
-        //             res.render('pages/search', {
-        //                 copyrightYear: siteData.year,
-        //                 searchResults: foundParks
-        //             });
-        //         }
-        //     })
-        // }
-        }
+        };
     }
 }
