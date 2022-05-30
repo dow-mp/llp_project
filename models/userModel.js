@@ -11,6 +11,9 @@ const userSchema = new Schema({
     },
     password: {
         type:String,
+    },
+    googleId: {
+        type: String,
     }
 });
 
@@ -25,5 +28,23 @@ passport.serializeUser((user, cb) => {
         cb(null, { id: user.id, username: user.username, name: user.displayName });
     });
 });
+
+passport.deserializeUser((user, cb) => {
+    process.nextTick(() => {
+        return cb(null, user);
+    });
+});
+
+passport.use(new GoogleStrategy({
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL: 'https://www.lovelocalparks.org/auth/google/admin'
+},
+function(accessToken, refreshToken, email, cb) {
+    User.findOrCreate({ googleId: email.id }, function (err, user) {
+        return cb(err, user);
+    });
+}
+));
 
 module.exports = User;

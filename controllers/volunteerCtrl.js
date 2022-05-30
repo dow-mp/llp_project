@@ -9,17 +9,19 @@ module.exports = {
     },
 
     volunteer_detail: (req, res) => {
-        const {_id} = req.params;
-        Volunteer.findOne({_id: _id}, (error, foundVolunteer) => {
-            if(error) {
-                return error
-            } else {
-                res.render('/pages/volunteerUpdate', {
-                    copyrightYear: siteData.year,
-                    foundVolunteer: foundVolunteer
-                });
-            }
-        })
+        if(req.isAuthenticated()) {
+            const {_id} = req.params;
+            Volunteer.findOne({_id: _id}, (error, foundVolunteer) => {
+                if(error) {
+                    return error
+                } else {
+                    res.render('/pages/volunteerUpdate', {
+                        copyrightYear: siteData.year,
+                        foundVolunteer: foundVolunteer
+                    });
+                }
+            });
+        }
     },
 
     createVolunteer: (req, res) => {
@@ -46,37 +48,41 @@ module.exports = {
 
     // update/edit a single submission from a user
     volunteer_update_put: (req, res) => {
-        const { _id } = req.params;
-        const {parkName, parkStreet, parkCity, parkState, parkZip, volunteerDate, volunteerTime, userName, userEmail, moreVolunteers} = req.body;
-        Volunteer.findByIdAndUpdate(_id, {$set: {
-            parkName: parkName,
-            parkStreet: parkStreet,
-            parkCity: parkCity,
-            parkState: parkState,
-            parkZip: parkZip,
-            volunteerDate: volunteerDate,
-            volunteerTime: volunteerTime,
-            userName: userName,
-            userEmail: userEmail,
-            moreVolunteers: moreVolunteers
-        }}, {new: true}, error => {
-            if(error) {
-                return error;
-            } else {
-                res.redirect('/');
-            }
-        });
+        if(req.isAuthenticated()) {
+            const { _id } = req.params;
+            const {parkName, parkStreet, parkCity, parkState, parkZip, volunteerDate, volunteerTime, userName, userEmail, moreVolunteers} = req.body;
+            Volunteer.findByIdAndUpdate(_id, {$set: {
+                parkName: parkName,
+                parkStreet: parkStreet,
+                parkCity: parkCity,
+                parkState: parkState,
+                parkZip: parkZip,
+                volunteerDate: volunteerDate,
+                volunteerTime: volunteerTime,
+                userName: userName,
+                userEmail: userEmail,
+                moreVolunteers: moreVolunteers
+            }}, {new: true}, error => {
+                if(error) {
+                    return error;
+                } else {
+                    res.redirect('/');
+                }
+            });
+        }
     },
 
     // delete a submission from a user
     volunteer_delete: (req, res) => {
-        const {_id} = req.params;
-        Volunteer.deleteOne({_id: _id}, error => {
-            if(error) {
-                return error;
-            } else {
-                res.redirect('/admin/volunteers')
-            }
-        })
+        if(req.isAuthenticated()) {
+            const {_id} = req.params;
+            Volunteer.deleteOne({_id: _id}, error => {
+                if(error) {
+                    return error;
+                } else {
+                    res.redirect('/admin/volunteers')
+                }
+            });
+        }
     }
 }

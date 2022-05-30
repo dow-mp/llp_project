@@ -14,11 +14,23 @@ router.route('/success')
 router.route('/thanks')
     .get(siteCtrl.thanks)
 
-router.route('/login')
-    .get(siteCtrl.login)
+router.route('/register')
+    .get(siteCtrl.register_get)
+    .post(siteCtrl.register_post)
 
-// making this its own route for now - worried this will become bigger with the addition of the API map - NO, I don't think this needs its own router/controller files
-// router.route('/search')
-//     .get(siteCtrl.search)
+router.route('/login')
+    .get(siteCtrl.login_get)
+    .post(siteCtrl.login_post)
+
+router.route('/auth/google')
+    .get(siteCtrl.google_get)
+
+router.route('/auth/google/admin')
+    .get(siteCtrl.google_redirect_get)
+
+router.route('/logout')
+    .get(siteCtrl.logout);
+
+
 
 module.exports = router;
