@@ -336,7 +336,7 @@ a {
     font-size: 1rem;
 }
 
-.user>input, .password>input, .center-submit {
+.username>input, .password>input, .center-submit {
     height: 10vh;
     max-height: 40px;
     min-height: 30px;
@@ -349,7 +349,7 @@ a {
     box-shadow: 2px 1px 8px var(--greengray);
 }
 
-.user, .password, .center-submit {
+.username, .password, .center-submit {
     display: inline-block;
     text-align: center;
     margin: 0 auto;
