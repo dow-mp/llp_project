@@ -7,7 +7,7 @@ const methodOverride = require('method-override');
 const path = require('path');
 const app = express();
 const routes = require('./routes/indexRoutes')
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.set('view engine', 'ejs');
 
