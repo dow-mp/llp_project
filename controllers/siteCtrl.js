@@ -52,6 +52,7 @@ module.exports = {
             username: username,
             password: password
         });
+
         req.login(user, (error) => {
             if(error) {
                 console.log(error);
@@ -63,15 +64,15 @@ module.exports = {
             }
         });
     },
-    google_get: passport.authenticate('google', {scope: ['openid', 'profile', 'email']}),
-    google_redirect_get: [
-        passport.authenticate('google', {failureRedirect: '/login'}),
-        function(req, res) {
-            res.redirect('/admin');
-        }
-    ],
+    // google_get: passport.authenticate('google', {scope: ['openid', 'profile', 'email']}),
+    // google_redirect_get: [
+    //     passport.authenticate('google', {failureRedirect: '/login'}),
+    //     function(req, res) {
+    //         res.redirect('/admin');
+    //     }
+    // ],
     logout: (req, res) => {
         req.logout();
-        res.redirect('/');
+        res.redirect('/login');
     }
 }
