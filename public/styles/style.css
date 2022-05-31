@@ -182,16 +182,18 @@ html, body {
     width: 40vw;
     /* margin: 0 -8px; */
     font-size: 0.75rem;
-    border: 3px solid var(--greengray);
+    /* border: 3px solid var(--greengray); */
     border-radius: 20px;
 
 }
 
 /* link styling for each flag within the main body */
-a {
+.flag > a {
     font-family:  var(--littletwig);
     font-size: 1.5rem;
     margin-left: 5px;
+    color: var(--snow);
+    text-decoration: none;
 }
 
 .nav-word:link {
@@ -803,7 +805,7 @@ footer {
         display: flex;
         flex-direction: column;
         background-color: var(--snow);
-        border: 3px solid var(--greengray);
+        /* border: 3px solid var(--greengray); */
         border-radius: 15px;
         /* color: var(--black); */
         width: 20vw;
