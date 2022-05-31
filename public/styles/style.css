@@ -27,10 +27,6 @@ html, body {
     padding: 0px;
 }
 
-/* .main-div {
-    height: 100vh;
-} */
-
 /* header banner styling */
 .top-banner {
     background-image: url(../media/images/Marine_Park_td_2019-05-24_063_-_Lenape_Playground.png);
@@ -51,7 +47,6 @@ html, body {
 
 /* items within header banner */
 
-/* attempt to create more visibility of logo; don't like; would prefer to change logo color */
  .logo-div {
     /* background-color: var(--snow); */
     height: fit-content;
