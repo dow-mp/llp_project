@@ -315,7 +315,7 @@ a {
     padding: 15px;
     margin: 20px auto;
     width: 60vw;
-    height: 40vh;
+    height: fit-content;
 }
 
 .login-form {
