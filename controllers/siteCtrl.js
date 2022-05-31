@@ -73,14 +73,15 @@ module.exports = {
     //     }
     // ],
     logout: (req, res) => {
-        res.render('/logout', function(req, res){
-            req.logout();
-            res.redirect('/login');
-          });
+        // res.render('/logout', function(req, res){
+        //     req.logout();
+        //     res.redirect('/login');
+        //   });
 
-        // req.logout(function(err) {
-        //     if (err) { return next(err); }
-        //     res.redirect('/');
+        req.logout(function(err) {
+            if (err) { return next(err); }
+            res.redirect('/');
+        })
             
     },
     error: (req, res) => {
