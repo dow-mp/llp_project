@@ -1,7 +1,7 @@
 const passport = require('passport');
 const passportLocalMongoose = require('passport-local-mongoose');
 // const GoogleStrategy = require('passport-google-oauth20').Strategy;
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 // const findOrCreate = require('mongoose-findorcreate');
 const { Schema } = mongoose;
 
