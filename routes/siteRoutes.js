@@ -22,6 +22,9 @@ router.route('/login')
     .get(siteCtrl.login_get)
     .post(siteCtrl.login_post)
 
+router.route('/logout')
+    .get(siteCtrl.logout)
+
 router.route('/404')
     .get(siteCtrl.error)
 
