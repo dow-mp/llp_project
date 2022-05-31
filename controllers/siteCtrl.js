@@ -23,22 +23,24 @@ module.exports = {
             copyrightYear: siteData.year
         });
     }, 
-    register_get: (req, res) => {
-        res.render('pages/register')
-    },
-    register_post: (req, res) => {
-        const {username, password} = req.body;
-        User.register({username: username}, password, (error, user) => {
-            if(error) {
-                console.log(error);
-                res.redirect('/register')
-            } else {
-                passport.authenticate('local')(req, res, () => {
-                    res.redirect('/admin')
-                });
-            }
-        });
-    },
+    // register_get: (req, res) => {
+    //     res.render('pages/register', {
+    //         copyrightYear: siteData.year
+    //     });
+    // },
+    // register_post: (req, res) => {
+    //     const {username, password} = req.body;
+    //     User.register({username: username}, password, (error, user) => {
+    //         if(error) {
+    //             console.log(error);
+    //             res.redirect('/register')
+    //         } else {
+    //             passport.authenticate('local')(req, res, () => {
+    //                 res.redirect('/admin')
+    //             });
+    //         }
+    //     });
+    // },
     login_get: (req, res) => {
         res.render('pages/login', {
             copyrightYear: siteData.year

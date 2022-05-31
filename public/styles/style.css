@@ -276,7 +276,7 @@ a {
     text-decoration: none;
 }
 
-.link-button:link {
+.link-button:link, .google-button:link {
     width: fit-content;
     height: fit-content;
     padding: 5px 25px;
@@ -285,24 +285,33 @@ a {
     border-radius: 5px;
     font-size: 1rem;
     text-decoration: none;
+    margin: 10px auto;
 }
 
-.link-button:visited {
+.link-button:visited, .google-button:visited {
     background-color: var(--deepred);
     color: var(--snow);
     text-decoration: none;
 }
 
-.link-button:hover {
+.link-button:hover, .google-button:hover {
     background-color: var(--snow);
     color: var(--celadon);
     border: 3px solid var(--celadon);
 }
 
-.link-button:active {
+.link-button:active, .google-button:active {
     background-color: var(--snow);
     color: var(--celadon);
     border: 3px solid var(--celadon);
+}
+
+.google-button > h2 {
+    margin: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+    text-decoration: none;
+    font-weight: 300;
 }
 
 /* styling for admin login page form */

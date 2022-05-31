@@ -14,9 +14,9 @@ router.route('/success')
 router.route('/thanks')
     .get(siteCtrl.thanks)
 
-router.route('/register')
-    .get(siteCtrl.register_get)
-    .post(siteCtrl.register_post)
+// router.route('/register')
+//     .get(siteCtrl.register_get)
+//     .post(siteCtrl.register_post)
 
 router.route('/login')
     .get(siteCtrl.login_get)
