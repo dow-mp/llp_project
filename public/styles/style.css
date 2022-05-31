@@ -187,6 +187,12 @@ html, body {
 
 }
 
+a {
+    font-family:  var(--littletwig);
+    font-size: 1.5rem;
+    margin-left: 5px;
+}
+
 /* link styling for each flag within the main body */
 .flag > a {
     font-family:  var(--littletwig);
