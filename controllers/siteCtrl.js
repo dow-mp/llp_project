@@ -30,10 +30,11 @@ module.exports = {
     },
     register_post: (req, res) => {
         const {username, password} = req.body;
+        console.log(req.body);
         User.register({username: username}, password, (error, user) => {
             if(error) {
                 console.log(error);
-                res.redirect('/register')
+                res.redirect('/404')
             } else {
                 passport.authenticate('local')(req, res, () => {
                     res.redirect('/admin')
@@ -74,5 +75,10 @@ module.exports = {
     logout: (req, res) => {
         req.logout();
         res.redirect('/login');
+    },
+    error: (req, res) => {
+        res.render('pages/404', {
+            copyrightYear: siteData.year
+        });
     }
 }
