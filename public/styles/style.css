@@ -556,11 +556,8 @@ label {
     border: 3px solid var(--greengray);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1rem;
-}
-
-/* .table-overflow-scroll-div {
     overflow: scroll;
-} */
+}
 
 /* styling for the footer container */
 footer {
