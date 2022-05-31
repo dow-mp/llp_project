@@ -167,7 +167,7 @@ html, body {
     color: var(--snow);
     justify-content: space-evenly;
     align-content: space-between;
-    height: 45vh;
+    height: fit-content;
     padding: 20px 0;
 }
 
@@ -180,7 +180,7 @@ html, body {
     text-align: center;
     height: 20vh;
     width: 40vw;
-    /* margin: 0 -8px; */
+    margin: 15px;
     font-size: 0.75rem;
     /* border: 3px solid var(--greengray); */
     border-radius: 20px;
@@ -574,7 +574,7 @@ footer {
     justify-content: space-around;
     align-items: flex-end;
     background-color: var(--deepred);
-    height: 100px;
+    height: fit-content;
     width: 100%;
     /* margin: 0 -8px; */
     font-size: 1.75rem;
@@ -713,7 +713,7 @@ footer {
         height: 20vh;
         background-color: var(--deepred);
         border-radius: 20px;
-
+        margin: 15px;
     }
 
     .inline-link:visited {     
