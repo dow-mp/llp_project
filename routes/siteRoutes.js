@@ -23,7 +23,7 @@ router.route('/login')
     .post(siteCtrl.login_post)
 
 router.route('/logout')
-    .get(siteCtrl.logout)
+    .post(siteCtrl.logout)
 
 router.route('/404')
     .get(siteCtrl.error)
