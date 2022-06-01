@@ -23,25 +23,27 @@ module.exports = {
             copyrightYear: siteData.year
         });
     }, 
-    register_get: (req, res) => {
-        res.render('pages/register', {
-            copyrightYear: siteData.year
-        });
-    },
-    register_post: (req, res) => {
-        const {username, password} = req.body;
-        console.log(req.body);
-        User.register({username: username}, password, (error, user) => {
-            if(error) {
-                console.log(error);
-                res.redirect('/404')
-            } else {
-                passport.authenticate('local')(req, res, () => {
-                    res.redirect('/admin')
-                });
-            }
-        });
-    },
+    // comment out registration page routes/controls to prevent unknown parties from registering for admin site access
+
+    // register_get: (req, res) => {
+    //     res.render('pages/register', {
+    //         copyrightYear: siteData.year
+    //     });
+    // },
+    // register_post: (req, res) => {
+    //     const {username, password} = req.body;
+    //     console.log(req.body);
+    //     User.register({username: username}, password, (error, user) => {
+    //         if(error) {
+    //             console.log(error);
+    //             res.redirect('/404')
+    //         } else {
+    //             passport.authenticate('local')(req, res, () => {
+    //                 res.redirect('/admin')
+    //             });
+    //         }
+    //     });
+    // },
     login_get: (req, res) => {
         res.render('pages/login', {
             copyrightYear: siteData.year
@@ -65,6 +67,8 @@ module.exports = {
             }
         });
     },
+    // comment out all google oauth related code below, no access to google oauth needed at this time - only two admin users registered using username/password
+
     // google_get: passport.authenticate('google', {scope: ['openid', 'profile', 'email']}),
     // google_redirect_get: [
     //     passport.authenticate('google', {failureRedirect: '/login'}),
@@ -73,16 +77,10 @@ module.exports = {
     //     }
     // ],
     logout: (req, res) => {
-        // res.render('/logout', function(req, res){
-        //     req.logout();
-        //     res.redirect('/login');
-        //   });
-
         req.logout(function(err) {
             if (err) { return next(err); }
             res.redirect('/');
-        })
-            
+        });       
     },
     error: (req, res) => {
         res.render('pages/404', {

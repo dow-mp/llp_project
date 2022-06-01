@@ -14,9 +14,11 @@ router.route('/success')
 router.route('/thanks')
     .get(siteCtrl.thanks)
 
-router.route('/register')
-    .get(siteCtrl.register_get)
-    .post(siteCtrl.register_post)
+// comment out registration page routes/controls to prevent unknown parties from registering for admin site access
+
+// router.route('/register')
+//     .get(siteCtrl.register_get)
+//     .post(siteCtrl.register_post)
 
 router.route('/login')
     .get(siteCtrl.login_get)

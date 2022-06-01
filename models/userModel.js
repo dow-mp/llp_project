@@ -1,5 +1,7 @@
 const passport = require('passport');
 const passportLocalMongoose = require('passport-local-mongoose');
+// comment out all google oauth related code below, no access to google oauth needed at this time - only two admin users registered using username/password
+
 // const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const mongoose = require('mongoose');
 // const findOrCreate = require('mongoose-findorcreate');
