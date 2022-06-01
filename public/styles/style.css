@@ -7,13 +7,15 @@
     --black: #000000;
     --gray: #7c7a7a;
     --brtgreen: #00661f;
-    --littletwig: little twig, Arial, Helvetica, sans-serif;
-    --sapodilla: sapodilla, Arial, Helvetica, sans-serif;
-    --bebas: 'Bebas Neue', cursive;
-    --cabin: 'Cabin Sketch', cursive;
-    --josefin: 'Josefin Slab', serif;
-    --poiret: 'Poiret One', cursive;
-    --euphoria: 'Euphoria Script', cursive;
+    --littletwig: little twig;
+    --sapodilla: sapodilla;
+    --bebas: 'Bebas Neue';
+    --cabin: 'Cabin Sketch';
+    --josefin: 'Josefin Slab';
+    --poiret: 'Poiret One';
+    --euphoria: 'Euphoria Script';
+    --neucha: neucha;
+    --sacramento: sacramento;
 }
 
 * {
