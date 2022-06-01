@@ -1,7 +1,3 @@
-/*  font-family: 'Bebas Neue', cursive;
-    font-family: 'Cabin Sketch', cursive;
-    font-family: 'Josefin Slab', serif;
-    font-family: 'Poiret One', cursive; */
 :root {
     --snow: #FFFCFF;
     --deepred: #702632;
@@ -13,6 +9,11 @@
     --brtgreen: #00661f;
     --littletwig: little twig, Arial, Helvetica, sans-serif;
     --sapodilla: sapodilla, Arial, Helvetica, sans-serif;
+    --bebas: 'Bebas Neue', cursive;
+    --cabin: 'Cabin Sketch', cursive;
+    --josefin: 'Josefin Slab', serif;
+    --poiret: 'Poiret One', cursive;
+    --euphoria: 'Euphoria Script', cursive;
 }
 
 * {
@@ -136,7 +137,7 @@ html, body {
 
 .blurb {
     padding-top: 20px;
-    font-family: var(--sapodilla);
+    font-family: var(--sapodilla), var(--euphoria);
     /* color: var(--snow); */
     font-size: 1.75rem;
     text-align: center;
@@ -188,14 +189,14 @@ html, body {
 }
 
 a {
-    font-family:  var(--littletwig);
+    font-family:  var(--littletwig), var(--poiret);
     font-size: 1.5rem;
     margin-left: 5px;
 }
 
 /* link styling for each flag within the main body */
 .flag > a {
-    font-family:  var(--littletwig);
+    font-family:  var(--littletwig), var(--poiret);
     font-size: 1.5rem;
     margin-left: 5px;
     color: var(--snow);
@@ -239,7 +240,7 @@ a {
 /* styling for the about page information section */
 .love-local-parks {
     text-transform: lowercase;
-    font-family: var(--sapodilla);
+    font-family: var(--sapodilla), var(--euphoria);
     font-size: 1.9rem;
     color: var(--celadon);
 }
@@ -265,24 +266,24 @@ a {
     display: flex;
     justify-items: center;
     align-items: center;
-    width: fit-content;
-    height: 5rem;
+    /* width: fit-content;
+    height: 5rem; */
     margin: 10px auto;
-    background-color: var(--deepred);
+    /* background-color: var(--deepred); */
     padding: 5px 10px;
-    border-radius: 15px;
+    /* border-radius: 15px; */
 }
 
 /* styles contact and search links on about and volunteer pages */
 .link-button > h2 {
-    margin: 15px;
+    margin: 15px auto;
     text-decoration: none;
 }
 
 .link-button:link, .google-button:link {
     width: fit-content;
     height: fit-content;
-    padding: 5px 25px;
+    padding: 5px 15px;
     background-color: var(--deepred);
     color: var(--snow);
     border-radius: 5px;
@@ -428,7 +429,7 @@ th {
 
 .form-headline {
     text-align: center;
-    font-family: var(--sapodilla);
+    font-family: var(--sapodilla), var(--euphoria);
     margin-top: 30px;
 }
 
@@ -593,13 +594,13 @@ footer {
 /* styling for links within the footer */
 .contact, .admin {
     color: var(--snow);
-    font-family: var(--littletwig);
+    font-family: var(--littletwig), var(--poiret);
     margin: 0 15px;
 }
 
 .copyright {
     color: var(--snow);
-    font-family: var(--sapodilla);
+    font-family: var(--sapodilla), var(--euphoria);
     margin: 5px 15px;
     margin-bottom: 5px;
 }
@@ -908,7 +909,7 @@ footer {
         text-transform: lowercase;
     }
 
-    .contact-info {
+    /* .contact-info {
         display: flex;
         justify-items: center;
         align-items: center;
@@ -918,7 +919,7 @@ footer {
         background-color:#ffffff;
         color: var(--deepred);
         padding: 5px 10px;
-    }
+    } */
 
     /* styling volunteer/help page forms/inputs */
     .input-form-div {
@@ -930,7 +931,7 @@ footer {
 
     .form-headline {
         text-align: center;
-        font-family: var(--sapodilla);
+        font-family: var(--sapodilla), var(--euphoria);
         margin-top: 30px;
     }
 
