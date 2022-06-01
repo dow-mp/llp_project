@@ -137,7 +137,7 @@ html, body {
 
 .blurb {
     padding-top: 20px;
-    font-family: var(--sapodilla), var(--euphoria);
+    font-family:var(--sapodilla), var(--euphoria), 'Segoe UI';
     /* color: var(--snow); */
     font-size: 1.75rem;
     text-align: center;
@@ -189,14 +189,14 @@ html, body {
 }
 
 a {
-    font-family:  var(--littletwig), var(--poiret);
+    font-family: var(--littletwig), var(--poiret), 'Cambria';
     font-size: 1.5rem;
     margin-left: 5px;
 }
 
 /* link styling for each flag within the main body */
 .flag > a {
-    font-family:  var(--littletwig), var(--poiret);
+    font-family: var(--littletwig), var(--poiret), 'Cambria';
     font-size: 1.5rem;
     margin-left: 5px;
     color: var(--snow);
@@ -240,7 +240,7 @@ a {
 /* styling for the about page information section */
 .love-local-parks {
     text-transform: lowercase;
-    font-family: var(--sapodilla), var(--euphoria);
+    font-family:var(--sapodilla), var(--euphoria), 'Segoe UI';
     font-size: 1.9rem;
     color: var(--celadon);
 }
@@ -429,7 +429,7 @@ th {
 
 .form-headline {
     text-align: center;
-    font-family: var(--sapodilla), var(--euphoria);
+    font-family:var(--sapodilla), var(--euphoria), 'Segoe UI';
     margin-top: 30px;
 }
 
@@ -594,13 +594,13 @@ footer {
 /* styling for links within the footer */
 .contact, .admin {
     color: var(--snow);
-    font-family: var(--littletwig), var(--poiret);
+    font-family: var(--littletwig), var(--poiret), 'Cambria';
     margin: 0 15px;
 }
 
 .copyright {
     color: var(--snow);
-    font-family: var(--sapodilla), var(--euphoria);
+    font-family:var(--sapodilla), var(--euphoria), 'Segoe UI';
     margin: 5px 15px;
     margin-bottom: 5px;
 }
@@ -931,7 +931,7 @@ footer {
 
     .form-headline {
         text-align: center;
-        font-family: var(--sapodilla), var(--euphoria);
+        font-family:var(--sapodilla), var(--euphoria), 'Segoe UI';
         margin-top: 30px;
     }
 
