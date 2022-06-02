@@ -212,7 +212,6 @@ html, body {
     font-size: 0.75rem;
     /* border: 3px solid var(--greengray); */
     border-radius: 20px;
-
 }
 
 a {
@@ -666,6 +665,10 @@ footer {
         font-size: 1.4rem;
     }
 
+    .flag {
+        box-shadow: 5px 5px 10px 1px darkgray;
+    }
+
     .love-local-parks {
         font-size: 1rem;
     }
@@ -681,10 +684,6 @@ footer {
     
     .center-submit {
         margin-top: 10px;
-    }
-
-    .park-photo {
-        display: none;
     }
     
     #logo {
@@ -742,6 +741,7 @@ footer {
         background-color: var(--deepred);
         border-radius: 20px;
         margin: 15px;
+        box-shadow: 5px 5px 10px 1px darkgray;
     }
 
     .inline-link:visited {     
@@ -892,6 +892,7 @@ footer {
         text-decoration: none;
         text-align: center;
         font-size: 2rem;
+        box-shadow: 5px 5px 10px 1px darkgray;
     }
     .index-link:active {
         display: flex;
@@ -907,6 +908,7 @@ footer {
         text-decoration: none;
         text-align: center;
         font-size: 2rem;
+        box-shadow: 5px 5px 10px 1px darkgray;
     }
 
     /* .main-link:link {
