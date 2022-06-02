@@ -2,32 +2,24 @@
     font-family: 'little twig';
     src: url('../media/fonts/little\ twig.otf');
     src: url('../media/fonts/little\ twig.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
   }
 
 @font-face {
   font-family: 'sapodilla';
   src: url('../media/fonts/sapodilla.otf');
   src: url('../media/fonts/sapodilla.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
 }
 
 @font-face {
     font-family: 'neucha';
     src: url('../media/fonts/neucha.ttf');
     src: url('../media/fonts/neucha.ttf') format('truetype');
-    font-weight: 500;
-    font-style:normal;
   }
 
 @font-face {
   font-family: 'sacramento';
   src: url('../media/fonts/sacramento.ttf');
   src: url('../media/fonts/sacramento.ttf') format('truetype');
-  font-weight: 500;
-  font-style:normal;
 }
 
 :root {
