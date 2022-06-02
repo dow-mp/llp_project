@@ -171,7 +171,7 @@ html, body {
 
 .blurb {
     padding-top: 20px;
-    font-family:var(--sapodilla), var(--sacramento), 'Segoe UI';
+    font-family:var(--sapodilla), 'sapodilla' var(--sacramento), 'Segoe UI';
     /* color: var(--snow); */
     font-size: 1.75rem;
     text-align: center;
