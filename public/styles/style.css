@@ -31,8 +31,8 @@
     --black: #000000;
     --gray: #7c7a7a;
     --brtgreen: #00661f;
-    --littletwig: 'little twig', neucha, 'Poiret One';
-    --sapodilla: sapodilla, sacramento, 'Euphoria Script';
+    --littletwig: 'little twig', 'neucha', 'Poiret One';
+    --sapodilla: 'sapodilla', 'sacramento', 'Euphoria Script';
     --bebas: 'Bebas Neue';
     --cabin: 'Cabin Sketch';
     --josefin: 'Josefin Slab';
@@ -163,7 +163,7 @@ html, body {
 
 .blurb {
     padding-top: 20px;
-    font-family:var(--sapodilla), 'sapodilla' var(--sacramento), 'Segoe UI';
+    font-family:var(--sapodilla);
     /* color: var(--snow); */
     font-size: 1.75rem;
     text-align: center;
@@ -215,14 +215,14 @@ html, body {
 }
 
 a {
-    font-family: var(--littletwig), var(--neucha), 'Cambria';
+    font-family: var(--littletwig);
     font-size: 1.5rem;
     margin-left: 5px;
 }
 
 /* link styling for each flag within the main body */
 .flag > a {
-    font-family: var(--littletwig), var(--neucha), 'Cambria';
+    font-family: var(--littletwig);
     font-size: 1.5rem;
     margin-left: 5px;
     color: var(--snow);
@@ -266,7 +266,7 @@ a {
 /* styling for the about page information section */
 .love-local-parks {
     text-transform: lowercase;
-    font-family:var(--sapodilla), var(--sacramento), 'Segoe UI';
+    font-family:var(--sapodilla);
     font-size: 1.9rem;
     color: var(--celadon);
 }
@@ -455,7 +455,7 @@ th {
 
 .form-headline {
     text-align: center;
-    font-family:var(--sapodilla), var(--sacramento), 'Segoe UI';
+    font-family:var(--sapodilla);
     margin-top: 30px;
 }
 
@@ -620,13 +620,13 @@ footer {
 /* styling for links within the footer */
 .contact, .admin {
     color: var(--snow);
-    font-family: var(--littletwig), var(--neucha), 'Cambria';
+    font-family: var(--littletwig);
     margin: 0 15px;
 }
 
 .copyright {
     color: var(--snow);
-    font-family:var(--sapodilla), var(--sacramento), 'Segoe UI';
+    font-family:var(--sapodilla);
     margin: 5px 15px;
     margin-bottom: 5px;
 }
@@ -957,7 +957,7 @@ footer {
 
     .form-headline {
         text-align: center;
-        font-family:var(--sapodilla), var(--sacramento), 'Segoe UI';
+        font-family:var(--sapodilla);
         margin-top: 30px;
     }
 
