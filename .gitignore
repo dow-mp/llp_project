@@ -1,4 +1,4 @@
-/Planning
+/planning
 node_modules/
 .env
-
+/public/media/fonts
