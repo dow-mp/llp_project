@@ -1,25 +1,29 @@
 @font-face {
-    font-family: 'little twig';
-    src: url('../media/fonts/little\ twig.otf');
-    src: url('../media/fonts/little\ twig.otf') format('opentype');
+    font-family: 'littletwig';
+    src: url('../media/fonts/littletwig.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
   }
 
 @font-face {
   font-family: 'sapodilla';
-  src: url('../media/fonts/sapodilla.otf');
   src: url('../media/fonts/sapodilla.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
     font-family: 'neucha';
-    src: url('../media/fonts/neucha.ttf');
     src: url('../media/fonts/neucha.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
   }
 
 @font-face {
   font-family: 'sacramento';
-  src: url('../media/fonts/sacramento.ttf');
   src: url('../media/fonts/sacramento.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 :root {
@@ -31,11 +35,8 @@
     --black: #000000;
     --gray: #7c7a7a;
     --brtgreen: #00661f;
-    --littletwig: 'little twig', 'neucha', 'Poiret One';
+    --littletwig: 'littletwig', 'neucha', 'Poiret One';
     --sapodilla: 'sapodilla', 'sacramento', 'Euphoria Script';
-    --bebas: 'Bebas Neue';
-    --cabin: 'Cabin Sketch';
-    --josefin: 'Josefin Slab';
     --poiret: 'Poiret One';
     --euphoria: 'Euphoria Script';
     --neucha: 'neucha';
