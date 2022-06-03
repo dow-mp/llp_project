@@ -1,18 +1,18 @@
 @font-face {
-    font-family: 'Sapodilla';
-    src: url('Sapodilla.woff2') format('woff2'),
-        url('Sapodilla.woff') format('woff'),
-        url('Sapodilla.ttf') format('truetype');
+    font-family: 'sapodilla';
+    src: url('../media/fonts/Sapodilla.woff2') format('woff2'),
+        url('../media/fonts/Sapodilla.woff') format('woff'),
+        url('../media/fonts/Sapodilla.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Little Twig';
-    src: url('LittleTwigRegular.woff2') format('woff2'),
-        url('LittleTwigRegular.woff') format('woff'),
-        url('LittleTwigRegular.ttf') format('truetype');
+    font-family: 'littletwig';
+    src: url('../media/fonts/LittleTwigRegular.woff2') format('woff2'),
+        url('../media/fonts/LittleTwigRegular.woff') format('woff'),
+        url('../media/fonts/LittleTwigRegular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -63,7 +63,7 @@ html, body {
 
 /* header banner styling */
 .top-banner {
-    background-image: url(/public/media/images/cpark.png);
+    background-image: url(../media/images/cpark.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
