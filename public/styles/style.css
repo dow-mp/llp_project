@@ -65,7 +65,7 @@ html, body {
 .top-banner {
     background-image: url('../media/images/clarklynn.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     background-position: center;
     background-color: var(--mutedred);
     height: 40vh;
