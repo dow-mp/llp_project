@@ -63,7 +63,7 @@ html, body {
 
 /* header banner styling */
 .top-banner {
-    background-image: url(../media/images/cpark.png);
+    background-image: url(/public/media/images/cpark.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
