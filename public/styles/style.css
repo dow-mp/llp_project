@@ -1,15 +1,21 @@
 @font-face {
-    font-family: 'littletwig';
-    src: url('../media/fonts/littletwig.otf') format('opentype');
+    font-family: 'Sapodilla';
+    src: url('Sapodilla.woff2') format('woff2'),
+        url('Sapodilla.woff') format('woff'),
+        url('Sapodilla.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
+    font-display: swap;
+}
 
 @font-face {
-  font-family: 'sapodilla';
-  src: url('../media/fonts/sapodilla.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Little Twig';
+    src: url('LittleTwigRegular.woff2') format('woff2'),
+        url('LittleTwigRegular.woff') format('woff'),
+        url('LittleTwigRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -57,36 +63,24 @@ html, body {
 
 /* header banner styling */
 .top-banner {
-    background-image: url(../media/images/Marine_Park_td_2019-05-24_063_-_Lenape_Playground.png);
+    background-image: url(../media/images/cpark.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-color: var(--mutedred);
-    /* color: var(--deepred); */
     height: 40vh;
     min-height: 150px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* margin: -10px -10px 0 -10px; */
-    /* margin: -8px; */
 }
 
 /* items within header banner */
 
  .logo-div {
-    /* background-color: var(--snow); */
     height: fit-content;
     width: fit-content;
-    /* min-width: 200px;
-    border: 3px solid black;
-    border-radius: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center; */
-    /* box-shadow: 0px 0px 40px 20px rgb(235, 224, 177); */
 }
 
 #logo {
@@ -124,7 +118,6 @@ html, body {
     border: 2px solid black;
     border-radius: 50%;
     font-size: 20px;
-    /* margin-right: 5px; */
     text-decoration: none;
 }
 
@@ -133,11 +126,8 @@ html, body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: flex-end; */
     background-color: var(--deepred);
     width: 100%;
-    /* margin-right: -10px; */
-    /* margin-left: -8px; */
 }
 
 /* Hiding the nav bar links when display is under 768px */
@@ -150,9 +140,6 @@ html, body {
     color: var(--snow);
     font-size: 40px;
     margin: 10px auto;
-    /*for now, center bars within nav div; if want to change to right align with social links in the future, change/add:
-    margin: 5px 0;
-    margin-right: 10vw;*/
 }
 
 /* blurb styling for home pg (no animation as of March 26, 2022) */
@@ -165,12 +152,10 @@ html, body {
 .blurb {
     padding-top: 20px;
     font-family:var(--sapodilla);
-    /* color: var(--snow); */
     font-size: 1.75rem;
     text-align: center;
     width: 70vw;
     margin: 0 auto;
-    /* border-radius: 20px; */
     background-image: linear-gradient(
         50deg,
         var(--brtgreen) 0%,
@@ -183,7 +168,6 @@ html, body {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
-    /* animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1); */
 }
 
 /* layout of the home page in vertical columns between header and footer */
@@ -210,7 +194,6 @@ html, body {
     width: 40vw;
     margin: 15px;
     font-size: 0.75rem;
-    /* border: 3px solid var(--greengray); */
     border-radius: 20px;
 }
 
@@ -292,12 +275,8 @@ a {
     display: flex;
     justify-items: center;
     align-items: center;
-    /* width: fit-content;
-    height: 5rem; */
     margin: 10px auto;
-    /* background-color: var(--deepred); */
     padding: 5px 10px;
-    /* border-radius: 15px; */
 }
 
 /* styles contact and search links on about and volunteer pages */
@@ -404,13 +383,18 @@ a {
     border: 5px solid var(--greengray);
 }
 
+#searchForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .map-box {
     display: flex;
     height: 40vh;
     width: 60vw;
     max-height: 600px;
     max-width: 600px;
-    /* border: 1px dashed var(--deepred); */
     margin: 40px auto;
 }
 
@@ -418,7 +402,6 @@ a {
     display: flex;
     justify-content: center;
     border-collapse: collapse;
-    /* border: 1px dashed var(--mutedred); */
     width: fit-content;
     height: fit-content;
     margin: 0 auto;
@@ -464,20 +447,16 @@ th {
     flex-direction: column;
     width: fit-content;
     margin: 20px auto;
-    /* margin-top: 20px; */
     border: 3px solid var(--greengray);
     padding: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* align-content: center; */
     align-items: right;
 }
 
-/* trying to line form inputs up to neaten them up - cannot get them to align along the right edges!!! */
 .form-items {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    /* justify-content: left; */
     margin: 0 auto;
     width: fit-content;
     border: none;
@@ -486,17 +465,10 @@ th {
 label {
     margin-top: 15px;
     max-width: 150px;
-    /* margin: 0 auto; */
     padding: 2px;
-    /* overflow-wrap: break-word; */
 }
 
 .label-input-pair > input, .label-input-pair > textarea, .vp-form {
-    /* display: block;
-    width: 25vw;
-    min-width: 150px;
-    margin: 0 auto; */
-/* trying out these settings */
     height: 10vh;
     max-height: 40px;
     min-height: 30px;
@@ -525,7 +497,6 @@ label {
     flex-direction: row;
     align-items: center;
     border: none;
-    /* margin: 0 auto; */
     padding: 2px;
 }
 
@@ -561,8 +532,6 @@ label {
 .toSearchPage {
     margin: 25px auto;
     overflow-wrap: break-word;
-    /* box-shadow: 2px 1px 8px; */
-    /* work on this box-shadow to match the shadow on inputs/submits etc */
 }
 
 .inline-link {
@@ -589,10 +558,20 @@ label {
     overflow: scroll;
 }
 
+.table-div {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    height: fit-content;
+    width: 90vw;
+    overflow-x: auto;
+}
+
 /* styling for the footer container */
 footer {
     display: flex;
-    /* flex-flow: row nowrap; */
     justify-content: space-evenly;
 }
 
@@ -603,10 +582,7 @@ footer {
     background-color: var(--deepred);
     height: fit-content;
     width: 100%;
-    /* margin: 0 -8px; */
     font-size: 1.75rem;
-    /* margin-top: 40px; */
-    /* padding-top: 60px; */
 }
 
 .footer-legal {
@@ -704,9 +680,20 @@ footer {
         border-radius: 5px;
         }
 }
+
+@media screen and (max-width: 768px) and (orientation:landscape) {
+    #logo {
+        height: 25vh;
+        width: auto;
+    }
+}
     
 /* TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+    #logo {
+        height: 25vh;
+    }
+
     .show-nav-links {
         background-color: var(--deepred);
         width:auto;
@@ -839,9 +826,7 @@ footer {
         display: flex;
         flex-direction: column;
         background-color: var(--snow);
-        /* border: 3px solid var(--greengray); */
         border-radius: 15px;
-        /* color: var(--black); */
         width: 20vw;
         height: 30vh;
         justify-content: center;
@@ -911,25 +896,6 @@ footer {
         box-shadow: 5px 5px 10px 1px darkgray;
     }
 
-    /* .main-link:link {
-        color: var(--deepred);
-    }
-    .main-link:visited {
-        color: var(--deepred);
-    }
-    .main-link:hover {
-        color: var(--deepred);
-        background-color: var(--snow);
-        color: var(--celadon);
-        text-decoration: none;
-    }
-    
-    .main-link:active {
-        background-color: var(--greengray);
-        color: var(--celadon);
-        text-decoration: none;
-    } */
-
     .inline-link:visited {     
         background-color: var(--greengray);
         color: var(--deepred);
@@ -937,18 +903,6 @@ footer {
         border-radius: 5px;
         text-transform: lowercase;
     }
-
-    /* .contact-info {
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        width: fit-content;
-        height: 5rem;
-        margin: 10px auto;
-        background-color:#ffffff;
-        color: var(--deepred);
-        padding: 5px 10px;
-    } */
 
     /* styling volunteer/help page forms/inputs */
     .input-form-div {
@@ -988,11 +942,6 @@ footer {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    /* .input-form > fieldset > label {
-        display: inline-block;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    } */
-
     .postToSocialLabel {
         text-align: center;
     }
@@ -1019,5 +968,16 @@ footer {
     .toSearchPage {
         text-transform: uppercase;
         font-size: 1.6rem;
+    }
+
+    .table-div {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-self: center;
+        height: fit-content;
+        width: 90vw;
+        overflow-x: none;
     }
 }

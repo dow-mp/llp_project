@@ -8,6 +8,10 @@ module.exports = {
             res.render('pages/admin', {
                 copyrightYear: siteData.year
             });
+        } else {
+            res.render('pages/404', {
+                copyrightYear: siteData.year
+            });
         }
     },
 

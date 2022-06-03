@@ -46,7 +46,8 @@ const volunteerSchema = new Schema({
         minlength: [6, 'minimum length required is 5 characters']
     },
     moreVolunteers: {
-        type: Boolean
+        type: Boolean,
+        default: false
     }
 })
 

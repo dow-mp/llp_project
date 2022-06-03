@@ -1,6 +1,6 @@
 <%- include('../partials/head') -%>
 
-    <div class="search-div">
+    <div class="table-div">
         <h1 class="blurb">search results</h1>
 
         <div class="map-table">
@@ -16,7 +16,6 @@
                         <th>Problem:</th>
                    </tr>
                 </thead>
-                <!-- as people mouse over a specific park - is it possible to highlight that pin on the map? -->
                 <tbody>
                     <% for (park of searchResults) { %>
                         <tr>
@@ -28,17 +27,14 @@
                             <td><%= park.helpText %></td>
                         </tr>
                     <% } %>
-                <!-- data will be supplied based on map search area -->
                 </tbody>
             </table>
         </div>
 
-        <section>
-            <div class="contact-info">
-                <a class="mailto link-button" href="/search" rel="noopener noreferrer"><h2>Search Again</h2></a>
-            </div>
-        </section>
-        
+        <div class="contact-info">
+            <a class="mailto link-button" href="/search" rel="noopener noreferrer"><h2>Search Again</h2></a>
+        </div>
+    
     </div>
 
     

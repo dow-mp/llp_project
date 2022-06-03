@@ -25,9 +25,7 @@ module.exports = {
     },
 
     createVolunteer: (req, res) => {
-        const {parkName, parkStreet, parkCity, parkState, parkZip, volunteerDate, volunteerTime, userName, userEmail, moreVolunteers} = req.body;
-        // adding console logging to check entries 2' validatorError issue occuring in mongoose
-        console.log(req.body);
+        const { parkName, parkStreet, parkCity, parkState, parkZip, volunteerDate, volunteerTime, userName, userEmail, moreVolunteers } = req.body;
         const newVolunteer = new Volunteer({
             parkName: parkName,
             parkStreet: parkStreet,
@@ -38,7 +36,7 @@ module.exports = {
             volunteerTime: volunteerTime,
             userName: userName,
             userEmail: userEmail,
-            moreVolunteers: moreVolunteers
+            moreVolunteers: moreVolunteers ? true : false
         });
 
         newVolunteer.save();
