@@ -251,7 +251,18 @@ a {
     text-transform: lowercase;
     font-family:var(--sapodilla);
     font-size: 1.9rem;
-    color: var(--celadon);
+    background-image: linear-gradient(
+        50deg,
+        var(--brtgreen) 0%,
+        var(--celadon) 49%,
+        var(--celadon) 50%,
+        var(--celadon) 51%,
+        var(--brtgreen) 100%
+    );
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
 }
 
 .about > p {
