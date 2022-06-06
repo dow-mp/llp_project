@@ -547,7 +547,7 @@ label {
 /* styling admin review tables */
 .review-table > thead > th, .search-table > thead > th{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 .review-table, .search-table {
@@ -556,6 +556,7 @@ label {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1rem;
     overflow: scroll;
+    font-size: 1rem;
 }
 
 .table-div {
@@ -998,6 +999,6 @@ footer {
         justify-self: center;
         height: fit-content;
         width: 80vw;
-        overflow: none;
+        overflow:visible;
     }
 }
