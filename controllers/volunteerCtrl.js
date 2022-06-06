@@ -59,12 +59,12 @@ module.exports = {
                 volunteerTime: volunteerTime,
                 userName: userName,
                 userEmail: userEmail,
-                moreVolunteers: moreVolunteers
+                moreVolunteers: moreVolunteers ? true : false
             }}, {new: true}, error => {
                 if(error) {
                     return error;
                 } else {
-                    res.redirect('/');
+                    res.redirect('/admin/volunteers');
                 }
             });
         }

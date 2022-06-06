@@ -997,7 +997,7 @@ footer {
         align-self: center;
         justify-self: center;
         height: fit-content;
-        width: 90vw;
-        overflow-x: none;
+        width: 80vw;
+        overflow: none;
     }
 }
