@@ -55,8 +55,8 @@ module.exports = {
                 parkCity: parkCity,
                 parkState: parkState,
                 parkZip: parkZip,
-                volunteerDate: volunteerDate,
-                volunteerTime: volunteerTime,
+                volunteerDate: volunteerDate.toDateString(),
+                volunteerTime: volunteerTime.toLocaleTimeString('en-US'),
                 userName: userName,
                 userEmail: userEmail,
                 moreVolunteers: moreVolunteers ? true : false

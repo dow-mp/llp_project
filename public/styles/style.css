@@ -38,6 +38,7 @@
     --mutedred: #912F40;
     --celadon: #247BA0;
     --greengray: #CBD4C2;
+    --olivegreen: #3d7d08;
     --black: #000000;
     --gray: #7c7a7a;
     --brtgreen: #00661f;
@@ -289,6 +290,53 @@ a {
     margin: 10px auto;
     padding: 5px 10px;
 }
+
+.dev-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 0.5px solid var(--celadon);
+    background-color: var(--greengray);
+    height: fit-content;
+    width: fit-content;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.dev-info > p {
+    margin: 0 auto;
+    font-family: var(--neucha);
+    font-size: 0.75rem;
+
+}
+
+.dev-info-link:link {
+    font-family: var(--neucha);
+    font-size: 0.75rem;
+    color: var(--deepred);
+    text-decoration: none;
+}
+
+.dev-info-link:visited {
+    font-size: 0.75rem;
+    color: var(--deepred);
+    text-decoration: none;
+}
+
+.dev-info-link:hover {
+    font-size: 0.75rem;
+    color: var(--celadon);
+    text-decoration: none;
+}
+
+.dev-info-link:active {
+    font-size: 0.75rem;
+    color: var(--mutedred);
+    text-decoration: none;
+}
+
 
 /* styles contact and search links on about and volunteer pages */
 .link-button > h2 {
