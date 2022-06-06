@@ -2,7 +2,7 @@
 
     <div class="input-form-div">
         <h1 class="form-headline blurb">Get Help for Your Local Park</h1>
-        <form class="input-form" action="/park" method="POST">
+        <form class="input-form" action="/park" method="POST" autocomplete="off">
             <fieldset class="form-items">
                 <div class="label-input-pair">
                     <label for="parkName"> Park name:</label>
@@ -15,7 +15,7 @@
                         <input id="parkStreet" name="parkStreet" placeholder="Street" type="text" class="vp-form" minlength="2" required />
                         <input id="parkCity" name="parkCity" placeholder="City" type="text" class="vp-form" minlength="2" required />
                         <input id="parkState" name="parkState" placeholder="State" type="text" class="vp-form" minlength="2" maxlength="2" required />
-                        <input id="parkZip" name="parkZip" placeholder="Zip" type="number" class="vp-form" minlength="5" maxlength="5" required />
+                        <input id="parkZip" name="parkZip" placeholder="Zip" type="text" class="vp-form" minlength="5" maxlength="5" required />
                     </div>
                 </div>
             <div class="label-input-pair">
