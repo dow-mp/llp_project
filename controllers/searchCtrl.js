@@ -16,14 +16,19 @@ module.exports = {
             });
         } else {
         const { searchTerm } = req.body;
-        console.log(req.body);
-        console.log(searchTerm);
-        // if (Number(searchTerm)) {
+        // console.log(req.body);
+        // console.log(searchTerm);
             Park.find({$or: [ 
                 {parkZip: searchTerm}, 
                 {parkState: { '$regex': searchTerm, '$options': 'i' }}, 
                 {parkCity: { '$regex': searchTerm, '$options': 'i' }}
             ]},  (error, foundParks) => {
+                console.log(foundParks);
+                if(foundParks.length === 0) {
+                    res.render('pages/noSearchResults', {
+                        copyrightYear: siteData.year
+                    });
+                };
                 if(error) {
                     return error;
                 } else {
