@@ -2,7 +2,6 @@ const express = require('express');
 const adminCtrl = require('../controllers/adminCtrl');
 const router = express.Router();
 
-// need to add an admin-console front page (like carols bookstore)
 router.route('/')
     .get(adminCtrl.admin)
 

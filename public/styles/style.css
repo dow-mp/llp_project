@@ -64,7 +64,7 @@ html, body {
 
 /* header banner styling */
 .top-banner {
-    background-image: url(/media/images/clarklynn.png);
+    background-image: url(/media/clarklynn.png);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
