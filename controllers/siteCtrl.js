@@ -25,25 +25,25 @@ module.exports = {
     }, 
     // comment out registration page routes/controls to prevent unknown parties from registering for admin site access
 
-    register_get: (req, res) => {
-        res.render('pages/register', {
-            copyrightYear: siteData.year
-        });
-    },
-    register_post: (req, res) => {
-        const {username, password} = req.body;
-        console.log(req.body);
-        User.register({username: username}, password, (error, user) => {
-            if(error) {
-                console.log(error);
-                res.redirect('/404')
-            } else {
-                passport.authenticate('local')(req, res, () => {
-                    res.redirect('/admin')
-                });
-            }
-        });
-    },
+    // register_get: (req, res) => {
+    //     res.render('pages/register', {
+    //         copyrightYear: siteData.year
+    //     });
+    // },
+    // register_post: (req, res) => {
+    //     const {username, password} = req.body;
+    //     console.log(req.body);
+    //     User.register({username: username}, password, (error, user) => {
+    //         if(error) {
+    //             console.log(error);
+    //             res.redirect('/404')
+    //         } else {
+    //             passport.authenticate('local')(req, res, () => {
+    //                 res.redirect('/admin')
+    //             });
+    //         }
+    //     });
+    // },
     login_get: (req, res) => {
         res.render('pages/login', {
             copyrightYear: siteData.year
