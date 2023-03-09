@@ -64,7 +64,7 @@ html, body {
 
 /* header banner styling */
 .top-banner {
-    background-image: url(/media/images/clarklynn.jpg);
+    background-image: url(/media/images/clarklynn2.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -643,6 +643,8 @@ footer {
     height: fit-content;
     width: 100%;
     font-size: 1.75rem;
+    /* position: absolute;
+    bottom: 0px; */
 }
 
 .footer-legal {
@@ -665,6 +667,7 @@ footer {
     font-family:var(--sapodilla);
     margin: 5px 15px;
     margin-bottom: 5px;
+
 }
 
 .photo-cred {
@@ -1057,5 +1060,12 @@ footer {
         align-self: center;
         justify-self: center;
         height: fit-content;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .footer {
+        position: absolute;
+        bottom: 0px;
     }
 }
